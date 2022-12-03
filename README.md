@@ -10,7 +10,7 @@ You are creating a library of authentication codes, examples and community inter
 
 ## Feature Requests
 
-##$	User: Unauthenticated
+##	User: Unauthenticated
 * Visit the platform to view basic information about it
 * View and Interact with the documentation
 * Register to contribute
