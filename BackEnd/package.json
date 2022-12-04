@@ -1,0 +1,28 @@
+{
+  "name": "teamgorilla-auth_wiki",
+  "version": "1.0.0",
+  "description": "a library of authentication codes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuri-training/TeamGorilla-Auth_wiki.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Express",
+    "Node",
+    "MongoDB"
+  ],
+  "author": "TeamGorilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zuri-training/TeamGorilla-Auth_wiki/issues"
+  },
+  "homepage": "https://github.com/zuri-training/TeamGorilla-Auth_wiki#readme"
+}
