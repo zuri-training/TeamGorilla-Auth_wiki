@@ -1,9 +1,11 @@
-const express = require("express");
-const router = express.Router();
+const router = require('express').Router();
 
 // Import the router controller
-const userController = require("../controllers/userController");
+const userController = require('../controllers/userController');
 
 // Login User Route
-router 
-    .post('/api/login', userController.loginUser);
+router
+    .post('/register', userController.createUser);
+
+
+module.exports = router;

@@ -9,23 +9,23 @@
 */
 
 const express = require("express");
-
 const connectDB = require("./database/index");
-
-const { json } = require("express");
-
+const userRoutes = require('./router/user');
 const { PORT } = process.env
+const uri = process.env.MONGODB_URI;
 
 require("dotenv").config();
 
 // connect to database
-connectDB();
+connectDB(uri);
 
 // Initialize Express
 const app = express();
 
-// initialize express middleware
+// initialize express middlewar
 app.use(express.json());
+app.use('/api', userRoutes);
+app.use(express.urlencoded({extended: false}));
 
 // Create a simple get request route
 app.get('/', (req, res) => {

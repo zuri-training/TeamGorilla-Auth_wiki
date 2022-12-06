@@ -5,15 +5,14 @@
 
 const mongoose = require("mongoose");
 require("dotenv").config();
-const { MONGODB_URI } = process.env
 
 // Creating connection function
-const connectDB = async () => {
+const connectDB = async (uri) => {
     try {
-        await mongoose.connect(MONGODB_URI, {
+        await mongoose.connect(uri, {
             useNewUrlParser : true,
             useUnifiedTopology : true
-        })
+        });
 
         console.log("MongoDB Connected...")
     } catch (error) {
