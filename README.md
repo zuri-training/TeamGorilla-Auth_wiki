@@ -110,7 +110,8 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 1. [Brandon Armand Nyamkimbi](https://github.com/Brandonarmand96)
 2. [Olubimi Michael Olumide](https://github.com/olumide12-cell)
 3. [Oluwabamise Olatunji](https://github.com/Analog-ng)
-4
+4. [Omosaye Moses Iseoluwa](https://github.com/theselaw)
+5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
 
 
 
