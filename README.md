@@ -3,7 +3,7 @@
 ## Zuri Team Inc | I4G x Zuri Project Phase | 23-11-22
 
 # Introduction
-# A platfor that allows users to have access to authentication codes and interact with communities.  
+# A platform that allows users to have access to authentication codes and interact with communities.  
 
 ## Project Name
 * Auth_wiki
@@ -110,7 +110,8 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 1. [Brandon Armand Nyamkimbi](https://github.com/Brandonarmand96)
 2. [Olubimi Michael Olumide](https://github.com/olumide12-cell)
 3. [Oluwabamise Olatunji](https://github.com/Analog-ng)
-
+4. [Omosaye Moses Iseoluwa](https://github.com/theselaw)
+5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
 
 
 
