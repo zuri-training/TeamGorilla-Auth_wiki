@@ -18,6 +18,8 @@ const userSchema = new Schema (
         },
         userRole: {
             type: String,
+            enum: ["user", "admin"],
+            default: "user"
         },
         isAuthenticated: {
             type: Boolean

@@ -1,11 +1,11 @@
 const router = require('express').Router();
-
-// Import the router controller
 const userController = require('../controllers/userController');
 
-// Login User Route
+
+// Register User Route
 router
-    .post('/register', userController.createUser);
+    .route('/register')
+    .post(userController.createUser);
 
 
 module.exports = router;

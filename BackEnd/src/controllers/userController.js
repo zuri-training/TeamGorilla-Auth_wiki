@@ -5,45 +5,35 @@ const bcrypt = require("bcrypt");
 const createUser = async (req, res) => {
     try {
         let request = await req.body;
-        const salt = await bcrypt.genSalt(10);
 
-        console.log(request);
-        console.log(req.body.password);
-        let hashedPassword = await bcrypt.hash(req.body.password, salt); 
+        const checkUserEmail = await User.findOne({ email: request.email });
 
-        let user = {
-            fullName: request.fullName,
-            email: request.email,
-            password: hashedPassword,
-            userRole: request.userRole,
-            isAuthenticated: request.isAuthenticated,
-            isActive: request.isActive
-        }
-        
-        let createdUser = await User.create(user);
+		if (checkUserEmail)
+			return res
+				.status(409)
+				.json({ message: "User with given email already Exist!" });
 
-        if (!createdUser) return res.status(404).json({
-            status: 'failed',
-            message: 'user Creation failed'
+        const salt = await bcrypt.genSalt(Number(process.env.SALT));
+        const hashedPassword = await bcrypt.hash(req.body.password, salt); 
+
+        await new User({ ...req.body, password: hashedPassword }).save();
+
+            return res.status(201).json({
+                status: 'success',
+                message: 'User Created Successful'
         });
-
-        return res.status(201).json({
-            status: 'success',
-            message: 'User Created Successful',
-            user: createdUser
-        })
     }catch(err){
-        res.status(500).json({
-            status: false,
-            message: 'internal matters',
-            error: err.message
+            res.status(500).json({
+                status: false,
+                message: 'internal matters',
+                error: err.message
         });
     }
 };
 
 
-loginUser = async (req, res) => {
-    
+userLogin = async (req, res) => {
+    const userToAuth = await User.findOne(req.body.email);     
 }
 
 module.exports = {

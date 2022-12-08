@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "fullName": "nwaoghor praise",
-    "email": "chukunweiken@gmail.com",
+    "email": "chukunwoghor@gmail.com",
     "password": "testing332",
-    "userRole": "creator"
+    "userRole": "admin"
 }
