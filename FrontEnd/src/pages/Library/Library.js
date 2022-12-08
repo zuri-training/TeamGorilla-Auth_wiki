@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import Header from '../../components/Header/Header.js'
-import Footer from '../../components/Footer/Footer.js'
 import {BsDownload, BsHeart, BsHeartFill} from 'react-icons/bs'
 import './Library.css'
 import logo from '../../assets/images/main 4.png'
@@ -17,7 +15,6 @@ function Library() {
   }
   return (
     <div className=''>
-      <Header />
       <div className='doc'>
       <div className='doc-header'>
         <div className='left'>
@@ -141,7 +138,6 @@ function Library() {
         
       </div>
       </div>
-      <Footer /> 
     </div>
   )
 }
