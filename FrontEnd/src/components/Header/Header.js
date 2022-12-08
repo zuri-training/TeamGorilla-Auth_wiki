@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Header.css'
+import logo from '../../assets/images/Authwiki.png'
 
 function Header() {
     // const [isVisible, setIsVisible] = useState(false)
@@ -14,8 +15,7 @@ function Header() {
   return (
     <div className='header'>
         <div className="logo">
-        Auth<span>wiki</span>
-        {/* <h1 className="logo">Auth<span>wiki</span></h1> */}
+        <img src={logo} alt='Authwiki-logo'/>
         </div>
         <div className="hamburger-lines" onClick={() => { toggle()}}>
           <span className="line line1">-</span>

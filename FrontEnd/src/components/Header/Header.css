@@ -1,5 +1,5 @@
 .header{
-    position: absolute;
+    position: relative;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -9,7 +9,8 @@
     left:0px;
     top:0px;
     background-color: #0A2145;
-    color:white
+    color:white;
+    /* margin-bottom: 100px; */
 }
 .header .hamburger-lines{
     display: none;

@@ -1,20 +1,21 @@
 
 .footer{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height:384px;
+    height:300px;
     bottom:0px;
     left:0px;
-    right: 0px;
+    /* right: 0px; */
     background-color: #0A2145;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    
 }
 .footer .footer-items{
-    /* width:20%; */
+    width:20%;
     margin:50px;
     line-height: 28px;
     height: 200px
@@ -50,6 +51,7 @@
 @media only screen and (max-width: 768px) {
     .footer{
         display: grid;
+        height:384px;
         grid-template-areas: 
         'd d d'
         'a b c'
