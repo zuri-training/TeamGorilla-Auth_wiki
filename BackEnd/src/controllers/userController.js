@@ -5,12 +5,11 @@ const bcrypt = require("bcrypt");
 const createUser = async (req, res) => {
     try {
         let request = await req.body;
+        const salt = await bcrypt.genSalt(10);
 
         console.log(request);
         console.log(req.body.password);
-        const hashedPassword = await bcrypt.hash(req.body.password)
-
-        console.log(hashedPassword);
+        let hashedPassword = await bcrypt.hash(req.body.password, salt); 
 
         let user = {
             fullName: request.fullName,
