@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.hero{
+    width: 100%;
+    max-height: 670px;
+    background-color: #0A2145;
+    align-items: center;
+
+}
+.hero-div {
+    background-color: #0A2145;
+    height: 170px;
+}
+.hero-div h1{
+    color: white;
+    margin-top: 120px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 64px;
+    font-family: 'Open Sans', sans-serif;
+}
+.hero p{
+    color: white;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Open Sans', sans-serif;
+}
+.Explore p{
+    color: white;
+   top: 160px;
+    padding-top: 40px;
+    border-style:3px  solid red;
+    font-family: 'Open Sans', sans-serif;
+}
+.Explore button{
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: red;
+    color: white;
+    margin-left: 600px;
+    margin-right: 600px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.code-codes{
+    margin-left: 260px;
+    margin-right: 260px;
+    
+}
+.code-codes .code2{
+    margin-left: -50px;
+    margin-top: -300px;
+}
+.code-codes .code3{
+    margin-top: -230px;
+    margin-left: -100px;
+}
+.brand{
+    height: 150px;
+    background-color: #EAF1FC;
+    margin-top: -70px;
+}
+.brands-with{
+    margin-top: 40px;
+}
+.brands-with .brand1{
+margin-top: 60px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 40px;
+text-align: center;
+color: #0A2145;
+font-family: 'Open Sans', sans-serif;
+padding-top: 60px;
+}
+.brands-with .brand2{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+margin-top: -15px;
+line-height: 28px;
+text-align: center;
+color: #1B2028;
+}
+
