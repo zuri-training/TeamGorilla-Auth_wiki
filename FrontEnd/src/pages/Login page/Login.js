@@ -15,6 +15,22 @@ export default function Login() {
           {/*The actual form*/}
           
           <div className='Col-2'>
+          <div className='TextContainer'>
+          <img  />
+            <h1>Welcome Back! </h1>
+          </div>
+            <form>
+            <input type="email" placeholder='Your Email' />
+            <input type="password" placeholder='Your Password' />
+            <button>Log in</button>
+            <div>
+              <input type="checkbox" /><span>Keep me logged in</span>  
+              <span><a href="">ffrffr</a></span>
+            </div>
+            
+            </form>
+            <hr/>
+            <p>Dont have an account yet? <span><a href=""> Sign Up</a></span></p>
           </div>
       </div>
     </section>

@@ -15,6 +15,17 @@ function verify() {
           {/*The actual form*/}
           
           <div className='Col-2'>
+          <div className='TextContainer'>
+          <img  />
+            <h1>Verify your E-mail </h1>
+            <p>A link has been sent to michealjames@gmail.com, use it to<br/> 
+sign in to account  </p>
+          </div>
+          <div className='Buttons'>
+            <button>Open your mail app</button>
+            <button>Resend link</button>
+            </div>
+            <p>Do you have an account alredy? <span><a href=""> Log In</a></span></p>
           </div>
       </div>
     </section>
