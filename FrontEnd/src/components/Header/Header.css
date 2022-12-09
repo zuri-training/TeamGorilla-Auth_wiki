@@ -1,5 +1,5 @@
 .header{
-    position: absolute;
+    position: relative;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -9,7 +9,8 @@
     left:0px;
     top:0px;
     background-color: #0A2145;
-    color:white
+    color:white;
+    /* margin-bottom: 100px; */
 }
 .header .hamburger-lines{
     display: none;
@@ -49,6 +50,8 @@
         flex-direction: column;
         align-items: flex-start;
         height:auto;
+        width: 100%;
+        overflow: hidden;
     }
     .logo{
         margin:50px;
@@ -59,7 +62,7 @@
         height: 35px;
         width: 50px;
         position: absolute;
-        top: -52px;
+        top: -65px;
         right: 20px;
         z-index: 2;
         display: flex;
@@ -74,8 +77,11 @@
         border-radius: 10px;
         font-size: 100px;
     }
+    .header .logo{
+        width: auto !important;
+    }
     .header div{
-        width: 100%;
+        width:100%;
 
     }
     .header a{

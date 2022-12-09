@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Header.css'
+import logo from '../../assets/images/Authwiki.png'
 
 function Header() {
     // const [isVisible, setIsVisible] = useState(false)
@@ -14,8 +15,7 @@ function Header() {
   return (
     <div className='header'>
         <div className="logo">
-        Auth<span>wiki</span>
-        {/* <h1 className="logo">Auth<span>wiki</span></h1> */}
+        <img src={logo} alt='Authwiki-logo'/>
         </div>
         <div className="hamburger-lines" onClick={() => { toggle()}}>
           <span className="line line1">-</span>
@@ -27,7 +27,7 @@ function Header() {
                 <a className={`nav ${displayV}`}>Home</a>
                 <a className={`nav active ${displayV}`}>Library</a>
                 <a className={`nav ${displayV}`}>Our Team</a>
-                <a className={`nav ${displayV}`}>FAQ</a>
+                <a href='/faq' className={`nav ${displayV}`}>FAQ</a>
         </div>
         <div>
             <a className={`nav ${displayV}`}>Log In</a>
