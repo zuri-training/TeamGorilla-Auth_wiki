@@ -48,7 +48,6 @@
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
-    line-height: 48px;
     color: #0A2145;
     margin-top: 100px;
 }
@@ -58,6 +57,7 @@
     font-weight: 400;
     font-size: 18px;
     color: #343434;
+    margin-top: -40px;
 }
 
 
