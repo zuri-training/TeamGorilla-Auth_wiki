@@ -9,6 +9,9 @@ router
 
 // Login User Route   
 router
+    .post('/register', userController.createUser)
+    .post('/comment', auth,userController.createComment)
+
     .route('/login')
     .post(userController.userLogin);
 
