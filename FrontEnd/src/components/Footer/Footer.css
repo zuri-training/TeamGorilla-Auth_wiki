@@ -5,13 +5,13 @@
     height:300px;
     bottom:0px;
     left:0px;
-    /* right: 0px; */
     background-color: #0A2145;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: flex-start;
+    align-items: center; */
+    /* padding: 0 0px 0 60px; */
     
 }
 .footer .footer-items{
@@ -20,6 +20,7 @@
     line-height: 28px;
     height: 200px
 }
+
 .footer h1{
     font-size: 20px;
     font-weight: 700;
