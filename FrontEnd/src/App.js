@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+       {/* <Footer />  */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Library/>}/>
