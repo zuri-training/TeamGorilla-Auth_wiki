@@ -15,6 +15,19 @@ function reset() {
           {/*The actual form*/}
           
           <div className='Col-2'>
+          <div className='TextContainer'>
+          <img  />
+            <h1> Forgotten your password?</h1>
+            <p>Follow these easy steps to reset your password</p>
+          </div>
+            <form>
+            <input type="email" placeholder='Your Email' />
+            {/*The Buttons*/}
+            <div className='Buttons'>
+            <button>Send Reset Link</button>
+            <button>Back</button>
+            </div>
+            </form>
           </div>
       </div>
     </section>
