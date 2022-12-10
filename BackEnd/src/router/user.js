@@ -1,19 +1,23 @@
-const router = require('express').Router();
+
+const express = require("express");
+const router = express.Router();
+const { check } = require("express-validator");
 const userController = require('../controllers/userController');
 
+// Login User Route
+router.post('/login', [
+        check("email", "Please enter a valid email address").isEmail(),
+        check("password", "valid password required").exists()
+    ], userController.loginUser);
 
-// Register User Route
-router
-    .route('/register')
-    .post(userController.createUser);
+router.post('/register', [
+    check("firstName", "Your firstname must be 3+ characters long").exists().isLength({ min: 3}),
+    check("lastName", "Your lastname must be 3+ characters long").exists().isLength({ min: 3}),
+    check("email", "Please enter a valid email address").exists().isEmail(),
+    check("password", "Password required and must be a minimum of 8 characters").exists().isLength({ min : 6 })
+], userController.registerUser);
 
-// Login User Route   
-router
-    .post('/register', userController.createUser)
-    .post('/comment', auth,userController.createComment)
-
-    .route('/login')
-    .post(userController.userLogin);
-
+// comment User Route   
+router.post('/comment', auth,userController.createComment)
 
 module.exports = router;
