@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Library from './pages/Library/Library';
 import FAQ from './pages/FAQ/FAQ';
+import Home from './pages/Home/Home';
+import Team from './pages/Team/Team';
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
        {/* <Footer />  */}
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Library/>}/>
+          <Route index element={<Home/>}/>
+          <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
+          <Route path='/team' element={<Team/>}/>          
         </Routes>
       </BrowserRouter>
       <Footer /> 
