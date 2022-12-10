@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Library from './pages/Library/Library';
 import FAQ from './pages/FAQ/FAQ';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
        {/* <Footer />  */}
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Library/>}/>
+          <Route index element={<Home/>}/>
+          <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
         </Routes>
       </BrowserRouter>
