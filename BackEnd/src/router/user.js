@@ -1,9 +1,8 @@
+
 const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
-
-// Import the router controller
-const userController = require("../controllers/userController");
+const userController = require('../controllers/userController');
 
 // Login User Route
 router.post('/login', [
@@ -17,5 +16,8 @@ router.post('/register', [
     check("email", "Please enter a valid email address").exists().isEmail(),
     check("password", "Password required and must be a minimum of 8 characters").exists().isLength({ min : 6 })
 ], userController.registerUser);
- 
+
+// comment User Route   
+router.post('/comment', auth,userController.createComment)
+
 module.exports = router;
