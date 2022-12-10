@@ -2,35 +2,79 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const Comments = require("../models/Comments");
 
+const { validationResult } = require("express-validator");
 
-const createUser = async (req, res) => {
-    try {
-        let request = await req.body;
 
-        const checkUserEmail = await User.findOne({ email: request.email });
+const jwt = require("jsonwebtoken");
 
-		if (checkUserEmail)
-			return res
-				.status(409)
-				.json({ status: 'success', message: "User with given email already Exist!" });
+const bcrypt = require("bcrypt");
+const connectDB = require("../database");
+const { db } = require("../models/User");
 
-        const salt = await bcrypt.genSalt(Number(process.env.SALT));
-        const hashedPassword = await bcrypt.hash(req.body.password, salt); 
+const { SECRET } = process.env;
 
-        await new User({ ...req.body, password: hashedPassword }).save();
 
-            return res.status(201).json({
-                status: 'success',
-                message: 'User Created Successful'
-        });
-    }catch(err){
-            res.status(500).json({
-                status: false,
-                message: 'internal error',
-                error: err.message
-        });
+// @route       POST api/login
+// @desc        Authenticate users(admin, user)
+exports.loginUser = async (req, res) => {
+    // Check for errors
+    const error = validationResult(req);
+    if (!error.isEmpty()) {
+       return res.status(400).json({
+            error: error.array()[0].msg
+        })
     }
-};
+
+    // Else, deconstruct request body
+    const { email, password } = req.body;
+
+    try {
+        // initialize user
+        const user = await User.findOne({email});
+
+        if (!user) {
+            return res.status(400).json({
+                message: "Invalid Credentials"
+            })
+        }
+
+        // Check for password
+        const isMatch =  bcrypt.compare(password, user.password);
+
+        if(!isMatch) {
+            return res.status(400).json({
+                message: "Invalid credentials"
+            })
+        }
+
+        // else, theres a match
+        // send payload and signed token
+        const payload = {
+            id: user.id
+        };
+
+        jwt.sign(payload, SECRET, {
+            expiresIn: 86400
+        }, (error, token) => {
+            if(error) throw error;
+
+            res.status(200).json({
+                message: "logged in successfully ",
+                user: {
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                    userRole: user.userRole,
+
+                },
+                token
+            })
+        })
+    } catch (error) {
+        console.error(error.message)
+
+        res.status(500).json({
+            message: "Internal Server Error"
 
 const createComment = async (req, res) => {
     try{
@@ -57,6 +101,52 @@ const createComment = async (req, res) => {
     }
 }
 
+// @route       POST api/register
+// @desc        creating new users
+exports.registerUser = async (req, res) => {
+
+    // validate request --- express-validator
+    const error = validationResult(req);
+    if(!error.isEmpty()) {
+        return res.status(400).json({
+            error : error.array()[0].msg
+        })
+    }
+
+    // else, deconstruct req.body
+    const {firstName, lastName, email, password, isActive, isAuthenticated} = req.body;
+
+    // Check if User doesn't exist in the database
+    const user = await User.findOne({email});
+
+    if(user) {
+        return res.status(400).json({
+            message : "User with this email already exists"
+        })
+    }
+
+    try {
+       const user =  User.create({
+            firstName,
+            lastName,
+            email,
+            password,
+            isActive,
+            isAuthenticated
+       });
+
+       res.status(201).json({
+            message : "user created successfully",
+            user
+       })
+
+   } catch (error) {
+        res.status(500).json({
+            message: "Internal Server Error",
+            error : error.message
+        })
+    }
+}
 const like = async (req, res) =>{
     try{
     const userId = req.user.id
@@ -109,40 +199,10 @@ const unLike = async (req, res) =>{
     }
 }
 
-const userLogin = async (req, res) => {
-    try{
-        const userToAuth = await User.findOne({email: req.body.email}); 
-        if (!userToAuth)
-                return res.status(401).json({ status: 'failed', message: "Invalid Email or Password" });
-
-        const validPassword = await bcrypt.compare(
-                    req.body.password,
-                    userToAuth.password
-        );
-
-        if (!validPassword)
-			return res.status(401).json({  status: 'failed', message: "Invalid Email or Password" });
-        
-        return res.status(200).json({
-                status: 'success',
-                message: "logged in successfully", 
-                data : {
-                    user: userToAuth
-                }
-        });
-    }catch(err) {
-        res.status(500).json({
-            status: false,
-            message: 'internal error',
-            error: err.message
-    });
-    }
-}
-
 module.exports = {
-    createUser,
+    registerUser,
     createComment,
     like,
     unLike,
-    userLogin
+    loginUser
 }
