@@ -1,18 +1,11 @@
-import React, {useState} from 'react'
-import {BsDownload, BsHeart, BsHeartFill} from 'react-icons/bs'
+import React from 'react'
+
 import './Library.css'
 import logo from '../../assets/images/main 4.png'
+import LibraryCard from './LibraryCard'
 
 function Library() {
-  const [checked, setChecked] = useState(false);
-  const check = () => {
-    if (checked === false){
-      setChecked(true)
-    } else{
-      setChecked(false)
-    }
-    console.log(checked)
-  }
+  
   return (
     <div className=''>
       <div className='doc'>
@@ -41,102 +34,15 @@ function Library() {
         </div>
       </div>
       <div className='container'>
-      <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
-        <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
-          <div className='el'>
-            <span><BsDownload /></span>
-            <p>200</p>
-          { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
-          <span onClick={() => check()}><BsHeart /></span>}
-          <p>200</p>
-          <button>Download</button>
-          </div>
-        </div>
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
+      <LibraryCard />
         
       </div>
       </div>

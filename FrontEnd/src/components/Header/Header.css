@@ -33,6 +33,7 @@
     font-style: 600;
     font-size: 20px;
     line-height: 28px; 
+    color: inherit;
     /* background-color:brown; */
 }
 .header .active{
