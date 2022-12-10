@@ -14,15 +14,15 @@ function App() {
     <div className="App">
       <Header />
        {/* <Footer />  */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
           <Route path='/team' element={<Team/>}/>          
         </Routes>
-      </BrowserRouter>
-      {/* <AuthLibrary /> */}
+      </BrowserRouter> */}
+      <AuthLibrary />
       <Footer /> 
     </div>
   );

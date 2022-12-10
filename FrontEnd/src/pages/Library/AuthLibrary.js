@@ -68,6 +68,23 @@ function AuthLibrary() {
                     <button>Add comment</button>
                 </div>
             </div>
+            <div className='comments-box'>
+                <h3>Ademola Ogunlalu . 1h</h3>
+                <p>Optional. For the purpose of mitigating replay attacks, specify the string value to use to associate a client session with an id_token. The id_token includes information (claims) about the user and, if specified, the nonce value. The id_token is encoded as a JWT and returned in the</p>
+                <div className='auth-like'>
+                <span><Thumbs /> </span>
+                <p>reply</p>
+                </div>
+            </div>
+            <hr></hr>
+            <div className='comments-box'>
+                <h3>Ademola Ogunlalu . 1h</h3>
+                <p>Optional. For the purpose of mitigating replay attacks, specify the string value to use to associate a client session with an id_token. The id_token includes information (claims) about the user and, if specified, the nonce value. The id_token is encoded as a JWT and returned in the</p>
+                <div className='auth-like'>
+                <span><Thumbs /> </span>
+                <p>reply</p>
+                </div>
+            </div>
         </div>
         </div>
     </div>
