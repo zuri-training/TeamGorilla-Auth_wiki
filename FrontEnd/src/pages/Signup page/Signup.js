@@ -12,9 +12,17 @@ export default function Signup() {
         <div className='Col-1'>
           <img src={colImg} alt="" />
           </div>
-          {/*The actual form*/}
           
+          {/*The actual form*/}
+
           <div className='Col-2'>
+          <div className='TextContainer'>
+          <img  />
+            <h1>Sign Up </h1>
+          </div>
+            <form>
+            <input type="text" placeholder='username' />
+            </form>
           </div>
       </div>
       </div>
