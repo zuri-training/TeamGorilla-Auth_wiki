@@ -24,9 +24,9 @@ function Header() {
         </div>
         
         <div>
-                <a className={`nav ${displayV}`}>Home</a>
-                <a className={`nav active ${displayV}`}>Library</a>
-                <a className={`nav ${displayV}`}>Our Team</a>
+                <a href='/' className={`nav ${displayV}`}>Home</a>
+                <a href='/library' className={`nav active ${displayV}`}>Library</a>
+                <a href='/team' className={`nav ${displayV}`}>Our Team</a>
                 <a href='/faq' className={`nav ${displayV}`}>FAQ</a>
         </div>
         <div>

@@ -21,7 +21,7 @@ export default function Question ({
     }
 
     return (
-        <div>
+        <div className='accordion'>
             <button 
             className={`question-section ${dropDown} ${className}`}
             onClick={toggleAccordion}
