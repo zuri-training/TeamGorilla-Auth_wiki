@@ -7,20 +7,22 @@ import Library from './pages/Library/Library';
 import FAQ from './pages/FAQ/FAQ';
 import Home from './pages/Home/Home';
 import Team from './pages/Team/Team';
+import AuthLibrary from './pages/Library/AuthLibrary';
 
 function App() {
   return (
     <div className="App">
       <Header />
        {/* <Footer />  */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
           <Route path='/team' element={<Team/>}/>          
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <AuthLibrary />
       <Footer /> 
     </div>
   );

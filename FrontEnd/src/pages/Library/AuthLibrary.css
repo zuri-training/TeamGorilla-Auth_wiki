@@ -1,0 +1,112 @@
+.auth{
+    width:84%;
+    margin: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+}
+.auth .auth-l{
+    font-weight: 600;
+    font-size: 12px;
+    color:#5B6B85;
+}
+.auth .doc-link{
+    text-decoration-line:underline;
+    color: #5B6B85 !important;
+}
+.auth .auth-title{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin:auto;
+}
+.auth h3{
+    font-weight: 700;
+    font-size: 34px;
+    color: #000000;
+}
+.auth button{
+    height: 48px;
+    border-radius: 8px;
+    font-style: 600;
+    font-size: 20px; 
+    color: white;
+    background: linear-gradient(180deg, #F06243 0%, #EE3C4C 100%);
+    margin: auto 0px;
+}
+.auth .auth-title span{
+    display: inline;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.auth .auth-desc{
+    width:70%;
+}
+.auth h5{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #343434;
+    margin: 0;
+}
+.auth p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1B2028;
+}
+.auth .auth-box{
+    background: #EAF1FC;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 16px 0;
+}
+.auth hr{
+    border: 1px solid #255fc5;
+    width:70%;
+    margin: 20px 0px;
+}
+.auth .comments{
+    width:70%;
+    font-size: 18px;
+}
+.auth .comments-start{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.auth .auth-like{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+    font-size: 18px;
+}
+.auth .auth-like span{
+    margin:0px 6px;
+}
+.auth .comments .comments-add-wrapper{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    /* margin-top: 50px; */
+    /* padding: 0; */
+    margin-bottom: 10px;
+    gap: 50px
+}
+.auth .comments .comments-add-wrapper input {
+    height: 100%;
+    outline: none;
+    width: 100%;
+    text-indent: 5px;
+    border: 2px solid #BBC3D0;
+    border-radius: 8px;
+}
+.auth .comments .comments-add-wrapper button{
+    height: 40px;
+    width:200px !important;
+    background: #1B2028;
+}
