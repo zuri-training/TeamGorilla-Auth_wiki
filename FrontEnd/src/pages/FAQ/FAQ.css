@@ -1,11 +1,3 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body {
-    color: #1B2028;
-} */
 header {
     text-align: center;
 }
@@ -15,11 +7,11 @@ header h1 {
 .sub-head {
     margin-top: 94px;
     text-align: left;
-    margin-left: 10vw;
-}
-.questions {
-    padding-top: 32px;
 }
 .last-question {
-    margin-bottom: 120px;
+    margin-bottom: calc(120px - 32px);
+}
+.FAQ {
+    width: 80%;
+    margin: auto;
 }

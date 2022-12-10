@@ -1,19 +1,11 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.accordion{
+    margin-bottom: 32px;
 }
-body {
-    font-family: sans-serif;
-    text-align: center;
-} */
 .question-section {
     background: #EAF1FC;
     border: none;
     border-radius: 16px;
     cursor: pointer;
-    width: 80vw;
-    margin-top: 32px;
     color: #1B2028;
 
 }
@@ -27,7 +19,7 @@ body {
     margin-left: 16px;
 }
 .question-style {
-    padding-block: 32px;
+    padding-block: 16px;
     font-size: 20px;
     font-weight: 600;
     width: 100%;
