@@ -38,6 +38,10 @@
 .header .active{
     background-color: #223758;
 } 
+.nav{
+    text-decoration: none;
+    color: inherit;
+}
 .header .nav:hover{
     background-color: #223758;
 }
