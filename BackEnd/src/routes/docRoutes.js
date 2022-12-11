@@ -4,6 +4,7 @@ const router = express.Router();
 
 
 router.get('/', getAllDocs);
+router.get('/:id', getSingleDoc);
 
 
 module.exports = router
