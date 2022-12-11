@@ -5,32 +5,26 @@ import "./reset.css";
 
 function reset() {
   return (
-    <section>
-       {/* Main container for all codes*/}
-      <div className="Container">
-        {/* left side of the form*/}
-        <div className='Col-1'>
-          <img src={colImg} alt="" />
-          </div>
-          {/*The actual form*/}
-          
-          <div className='Col-2'>
-          <div className='TextContainer'>
-          <img  />
-            <h1> Forgotten your password?</h1>
-            <p>Follow these easy steps to reset your password</p>
-          </div>
-            <form>
-            <input type="email" placeholder='Your Email' />
-            {/*The Buttons*/}
-            <div className='Buttons'>
-            <button>Send Reset Link</button>
-            <button>Back</button>
-            </div>
-            </form>
-          </div>
-      </div>
-    </section>
+        <main>
+    <div class="Main-Container">
+    <div class="Left-Form-Container">
+     <img class="Icon" src="/Assets/reset.png" alt="" >
+ 
+    </div>
+    <div class="Right-Form-Container">
+        <img class="logo" src="/Assets/Authwiki-red.png" alt="logo"/>
+        <h2>Forgotten your password?</h2>
+        <p>Follow these easy steps to reset your password</p>
+    <form>
+        <label for="Email"></label>
+        <input name="Email" id="inputs" type="email" placeholder="Your Email"/>
+        <button id="btn-1" type="submit">Send Reset Link</button>
+        <button id="btn-2" type="reset">Back</button>
+    </form>
+    </div>
+
+    </div>
+    </main>
   )
 }
 
