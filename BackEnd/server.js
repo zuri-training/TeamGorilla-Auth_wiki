@@ -9,11 +9,12 @@ const app = express();
 
 const { json } = require("express");
 const userRoutes = require('./src/routes/userRoutes');
+const docRoutes = require("./src/routes/docRoutes");
 const uri = process.env.MONGODB_URI;
 
 
 // connect to database
-connectDB(uri);
+connectDB();
 
 
 app.use(express.json());
@@ -23,6 +24,7 @@ app.use(express.urlencoded({extended: false}));
 
 //routes
 app.use('/api/user', userRoutes);
+app.use('/api/docs', docRoutes);
 
 
 //PORT
