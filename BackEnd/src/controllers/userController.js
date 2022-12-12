@@ -33,8 +33,8 @@ const registerUser = asyncHandler( async (req, res) => {
 			throw new Error('User already Exists');
 		}
         const user = await User.create({
-			fullname,
-			username,
+			firstName,
+			lastName,
 			email,
 			password,
 			verificationCode: verifyToken,
@@ -42,7 +42,7 @@ const registerUser = asyncHandler( async (req, res) => {
 
 		if (user) {
 			const text = `<h1>Email Confirmation</h1>
-        <h2>Hello ${username}</h2>
+        <h2>Hello ${firstName}</h2>
         <p>Verify your email address to complete the signup and login to your account to Authwiki</p>
         <a href='https://localhost:8000/user/confirm/${user.verificationCode}'> Click here</a>
 

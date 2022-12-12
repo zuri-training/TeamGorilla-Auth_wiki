@@ -1,23 +1,24 @@
-@url = http://localhost:4000
+@url = http://localhost:5001
 
 ###
-POST {{url}}/api/login HTTP/1.1
+POST {{url}}/api/user/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email" : "test123@test.com",
-    "password" : "test1234"
+    "email" : "chukunwaoghor@gmail.com",
+    "password" : "test12345"
 }
 
 ###
-POST {{url}}/api/register HTTP/1.1
+POST {{url}}/api/user/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName" : "test373",
+    "firstName" : "test0004",
     "lastName" : "test",
-    "email" : "test373@test.com",
-    "password" : "test1234"
+    "email" : "chukunwaoghor@gmail.com",
+    "password" : "test12345"
 }
 
 ###
+GET {{url}}/user/confirm/41942069-cdc5-42be-9f7c-57201cbbb2be HTTP/1.1
