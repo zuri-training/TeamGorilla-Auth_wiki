@@ -1,33 +1,51 @@
 
+const asyncHandler = require("express-async-handler");
 const Comment = require("../models/commentModel");
+const User = require("../models/userModel");
 
 
 
-
-const createComment = async (req, res) => {
+const createComment = asyncHandler(async (req, res) => {
     try{
-        const body = await req.body;
-        const userId = req.user.id;
-        const docId = req.params.id
+        const userId = await req.session.userId;
+        const author = await User.findOne({userId});
+        const documentationID = req.params.id;
+
+        console.log(userId);
+        console.log(author);
+
+        const {body, like, hate} =  await req.body;
 
         const comment = await Comment.create({
-            body: body,
-            author: userId,
-            documentation_id: docId
-
+                body,
+                like,
+                hate,
+                author,
+                documentationID
         });
-        if(comment){
-            const createdComment = await comment.save();
+        
+        if(comment) {
             res.status(201).json({
                 success: true,
-                comment: createdComment
+                message: "Comment Created",
+                comment
             })
         }
+        
     }catch(err){
         res.status(500)
         throw new Error(err.message)
     }
-}
+});
+
+
+
+
+
+
+
+
+
 
 const like = async (req, res) =>{
     try{

@@ -40,6 +40,8 @@ const registerUser = asyncHandler( async (req, res) => {
 			verificationCode: verifyToken,
 		});
 
+		req.session.userId = user.id;
+
 		if (user) {
 			const text = `<h1>Email Confirmation</h1>
         <h2>Hello ${firstName}</h2>
@@ -137,6 +139,9 @@ const loginUser = asyncHandler(async (req, res) => {
 			'Your Account is not Verified. Please Verifiy Your Account'
 		);
 	}
+
+	req.session.userId = user.id;
+	
 	res.status(200).json({
 		success: true,
 		message: 'Logged in successfully',
