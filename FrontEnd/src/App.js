@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ/FAQ';
 import Home from './pages/Home/Home';
 import Team from './pages/Team/Team';
 import AuthLibrary from './pages/Library/AuthLibrary';
+import Login from './pages/Login page/Login'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path='/team' element={<Team/>}/>          
         </Routes>
       </BrowserRouter> */}
-      <AuthLibrary />
+      {/* <AuthLibrary /> */}
+      <Login />
       <Footer /> 
     </div>
   );
