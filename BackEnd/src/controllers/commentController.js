@@ -11,15 +11,10 @@ const createComment = asyncHandler(async (req, res) => {
         const author = await User.findOne({userId});
         const documentationID = req.params.id;
 
-        console.log(userId);
-        console.log(author);
-
-        const {body, like, hate} =  await req.body;
+        const {body} =  await req.body;
 
         const comment = await Comment.create({
                 body,
-                like,
-                hate,
                 author,
                 documentationID
         });
@@ -33,18 +28,12 @@ const createComment = asyncHandler(async (req, res) => {
         }
         
     }catch(err){
-        res.status(500)
-        throw new Error(err.message)
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
     }
 });
-
-
-
-
-
-
-
-
 
 
 const like = async (req, res) =>{
@@ -100,7 +89,5 @@ const unLike = async (req, res) =>{
 }
 
 module.exports = {
-    createComment,
-    like,
-    unLike,
+    createComment
 }
