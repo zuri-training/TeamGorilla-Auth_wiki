@@ -5,30 +5,25 @@ import "./verify.css";
 
 function verify() {
   return (
-    <section>
-      {/* Main container for all codes*/}
-      <div className="Container">
-        {/* left side of the form*/}
-        <div className='Col-1'>
-          <img src={colImg} alt="" />
-          </div>
-          {/*The actual form*/}
-          
-          <div className='Col-2'>
-          <div className='TextContainer'>
-          <img  />
-            <h1>Verify your E-mail </h1>
-            <p>A link has been sent to michealjames@gmail.com, use it to<br/> 
+    <main>
+    <div class="Main-Container">
+    <div class="Left-Form-Container">
+        <img class="Icon" src="/Assets/verify.png" alt="" >
+
+    </div>
+
+    <div class="Right-Form-Container">
+        <img class="logo" src="/Assets/Authwiki-red.png" alt="logo"/>
+        <h2 class="verify-heading">Verify your E-mail</h2>
+        <p class="heading-text">A link has been sent to michealjames@gmail.com, use it to<br/>
 sign in to account  </p>
-          </div>
-          <div className='Buttons'>
-            <button>Open your mail app</button>
-            <button>Resend link</button>
-            </div>
-            <p>Do you have an account alredy? <span><a href=""> Log In</a></span></p>
-          </div>
-      </div>
-    </section>
+<div class="button-wrapper"><button id="btn-1" type="submit" class="mail-button">Open your mail app</button>
+    <button id="btn-2" class="resend-link">Resend link</button></div>
+    <p class="base-link">Do you have an account alredy?  <span><a href="">Log In</a></span></p>
+    </div>
+
+    </div>
+    </main>
   )
 }
 

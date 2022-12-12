@@ -5,34 +5,28 @@ import "./Login.css";
 
 export default function Login() {
   return (
-    <section>
-      {/* Main container for all codes*/}
-      <div className="Container">
-        {/* left side of the form*/}
-        <div className='Col-1'>
-          <img src={colImg} alt="" />
-          </div>
-          {/*The actual form*/}
-          
-          <div className='Col-2'>
-          <div className='TextContainer'>
-          <img  />
-            <h1>Welcome Back! </h1>
-          </div>
-            <form>
-            <input type="email" placeholder='Your Email' />
-            <input type="password" placeholder='Your Password' />
-            <button>Log in</button>
-            <div>
-              <input type="checkbox" /><span>Keep me logged in</span>  
-              <span><a href="">ffrffr</a></span>
-            </div>
-            
-            </form>
-            <hr/>
-            <p>Dont have an account yet? <span><a href=""> Sign Up</a></span></p>
-          </div>
-      </div>
-    </section>
+    <main>
+    <div class="Main-Container">
+    <div class="Left-Form-Container">
+    <img class="Icon" src="/Assets/signin.png" alt="" >
+
+    </div>
+    <div class="Right-Form-Container">
+        <img class="logo" src="/Assets/Authwiki-red.png" alt="logo"/>
+        <h2>Welcome Back!</h2>
+        <div class="hrwrapper"><hr id="hrline"/>OR LOGIN WITH EMAIL<hr id="hrline" /></div>
+    <div class="UpperLink"><img class="Google-icon"src="/Assets/google.png" alt=""> <span class="alt-Auth">Log in with Google</span></div>
+    <form>
+        <input id="inputs" type="email" placeholder="Your Email"/>
+        <input id="inputs" type="password" placeholder="Your Password"/>
+        <div class="lower-link"><div class="Remember-Me"><input type="checkbox"><span>Keep me logged in</span></div>  <div class="forgotten"><span><a href="">Forget password?</a></span></div></div>
+        <button id="submit" type="submit">Log in</button>
+    </form>
+    <hr/>
+    <div class="base-link">Dont have an account yet?  <a href="">Sign Up</a></div>
+    </div>
+
+    </div>
+    </main>
   )
 }
