@@ -6,7 +6,7 @@ const { checkIfLoginedIn } = require('../middleware/checkLoginmiddleware');
 
 // comment User Route   
 
-router.post('/',[
+router.post('/:id',[
     check("body", "Make sure comment is not empty").exists()
 ], checkIfLoginedIn, commentController.createComment);
 

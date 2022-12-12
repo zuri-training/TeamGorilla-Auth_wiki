@@ -35,6 +35,7 @@ const createComment = asyncHandler(async (req, res) => {
     }
 });
 
+//pending work on like and unlike
 
 const like = async (req, res) =>{
     try{
@@ -46,7 +47,7 @@ const like = async (req, res) =>{
     if(!comment){
         res.status(404).json({
             success: false,
-            message: `comment with id ${commentId}not found`
+            message: `comment with id ${commentId} not found`
         })
     }
     else{
