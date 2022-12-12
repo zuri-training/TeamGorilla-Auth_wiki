@@ -10,7 +10,7 @@ const uri = process.env.MONGODB_URI
 // Creating connection function
 const connectDB = async () => {
     try {
-        await mongoose.connect(uri);
+        mongoose.connect(uri);//Nwaoghor Priase Removed await from this function becuase it does nothin to the function anyways
         console.log('Connected to MongoDB');
     } catch (err) {
         // if (err) return err.message;
