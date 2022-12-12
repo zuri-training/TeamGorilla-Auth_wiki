@@ -6,4 +6,4 @@ const commentController = require('../controllers/commentController');
 // comment User Route   
 router.post('/comment', commentController.createComment)
 
-module.exports = router
+module.exports = router;
