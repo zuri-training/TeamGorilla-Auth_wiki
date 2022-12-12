@@ -3,7 +3,7 @@ import colImg from '../../assets/images/signin.png';
 // import googleImg from '../../assets/images/g'
 import logo from '../../assets/images/logo-red.png'
 import { useForm } from 'react-hook-form';
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
   return (
