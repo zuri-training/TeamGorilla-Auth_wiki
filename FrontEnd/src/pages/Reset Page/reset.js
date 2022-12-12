@@ -1,18 +1,20 @@
 import React from 'react'
-import colImg from '../assets/images/reset.png';
+import resetImg from '../../assets/images/reset.png';
+// import googleImg from '../../assets/images/g'
+import logo from '../../assets/images/logo-red.png'
 import { useForm } from 'react-hook-form';
 import "./reset.css";
 
 function reset() {
   return (
         <main>
-    <div class="Main-Container">
-    <div class="Left-Form-Container">
-     <img class="Icon" src="/Assets/reset.png" alt="" >
+    <div className="Main-Container">
+    <div className="Left-Form-Container">
+     <img className="Icon" src={resetImg} alt="" />
  
     </div>
-    <div class="Right-Form-Container">
-        <img class="logo" src="/Assets/Authwiki-red.png" alt="logo"/>
+    <div className="Right-Form-Container">
+      <img className="logo" src={logo} alt="logo"/>
         <h2>Forgotten your password?</h2>
         <p>Follow these easy steps to reset your password</p>
     <form>
