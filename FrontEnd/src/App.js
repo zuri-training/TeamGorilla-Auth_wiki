@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Header />
        {/* <Footer />  */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='/library' element={<Library/>}/>
@@ -30,7 +30,7 @@ function App() {
           <Route path='/verification' element={<Verification/>}/>
           <Route path='/library/auth' element={<AuthLibrary/>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* <AuthLibrary /> */}
       {/* <Login /> */}
       <Footer /> 
