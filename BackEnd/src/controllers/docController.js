@@ -48,7 +48,7 @@ const getSingleDoc = asyncHandler( async (req, res) => {
     // get document by ID
     try {
         const { id } = req.params
-        const doc = Doc.findOne(id);
+        const doc = await Doc.findOne(id);
 
         if(!doc) {
             return res.status(400).json({
@@ -84,7 +84,7 @@ const downloadDoc = asyncHandler( async (req, res) => {
         const { id } = req.params;
 
         // check  if document exists
-        const doc = Doc.findOne(id);
+        const doc = await Doc.findOne(id);
 
         if(!doc) {
             return res.status(400).json({
@@ -118,14 +118,85 @@ const downloadDoc = asyncHandler( async (req, res) => {
  * @access Public
 */
 
-// const docReaction = asyncHandler( async (req, res) => {
+const docReaction = asyncHandler( async (req, res) => {
+    // Like and Dislike routes
+    try {
+        // get id from request parameter
+        const { id } = req.params;
 
-// });
+        // check  if document exists
+        const doc = await Doc.findOne(id);
+
+        if(!doc) {
+            return res.status(400).json({
+                success: false,
+                message: "Documentation not found"
+            })
+        };
+
+
+        // get reaction from request body
+        const { reaction } = req.body;
+
+        // fetch user id
+        const user = req.user.id;
+
+        // if the user likes
+        if(reaction === "like") {
+            const checkLike = doc.liked.includes(user);
+            if(checkLike) {
+                const idx = doc.liked.indexOf(user);
+                doc.liked.splice(idx, 1);
+
+                return res.status(200).json({
+                    success: true,
+                    message: "Successfully Unliked!"
+                })
+
+            } else{
+                doc.liked.push(user);
+
+                return res.status(200).json({
+                    success: true,
+                    message: "Liked Successfully!"
+                });
+            }
+        }
+
+        // if the user dislikes
+        if (reaction === "dislike") {
+            const checkLike = doc.unlike.includes(user);
+            if(checkLike) {
+                const idx = doc.unlike.indexOf(user);
+                doc.unlike.splice(idx, 1);
+
+                return res.status(200).json({
+                    success: true,
+                    message: "Successfully Un-disliked!"
+                })
+
+            }else {
+                doc.unlike.push(user);
+                
+                return res.status(200).json({
+                    success: true,
+                    message: "disliked Successfully!"
+                });
+            }
+        }
+
+    } catch (error) {
+        res.status(500)
+        throw new Error(error.message);
+    }
+    
+});
 
 
 
 module.exports = {
     getAllDocs,
     getSingleDoc,
-    downloadDoc
+    downloadDoc,
+    docReaction
 }
