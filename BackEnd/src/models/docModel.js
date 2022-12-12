@@ -41,6 +41,9 @@ const DocumentationSchema = mongoose.Schema(
         unlike: {
             type: [String],
             default: []
+        },
+        docLink: {
+            type: String
         }
     }
 );
