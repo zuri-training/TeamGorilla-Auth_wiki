@@ -1,5 +1,5 @@
 import React from 'react'
-import './Library.css'
+import "../../assets/styles/Library.css";
 import LibraryCard from './LibraryCard'
 import LibraryHeader from './LibraryHeader'
 

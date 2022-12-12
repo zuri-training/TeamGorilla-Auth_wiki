@@ -1,9 +1,9 @@
 import React from 'react'
-import resetImg from '../../assets/images/reset.png';
+import resetImg from '../../assets/images/reset-password.png';
 // import googleImg from '../../assets/images/g'
 import logo from '../../assets/images/logo-red.png'
 import { useForm } from 'react-hook-form';
-import "./reset.css";
+import "../../assets/styles/Login.css";
 
 function reset() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Question from './structure/structure'
-import './FAQ.css'
+import Question from './structure/Structure'
+import "../../assets/styles/FAQ.css";
 
 export default function FAQ () {
     return (
