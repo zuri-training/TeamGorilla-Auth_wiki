@@ -11,7 +11,7 @@ import AuthLibrary from './pages/Library/AuthLibrary';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Reset from './pages/Reset/Reset';
-import Verification from './pages/Verification/Verification';
+import Verify from './pages/Verification/Verify';
 
 function App() {
   return (
@@ -33,6 +33,10 @@ function App() {
       </BrowserRouter> */}
       {/* <AuthLibrary /> */}
       {/* <Login /> */}
+      {/* <Signup /> */}
+      {/* <Reset /> */}
+      <Team />
+      {/* <Verify /> */}
       <Footer /> 
     </div>
   );

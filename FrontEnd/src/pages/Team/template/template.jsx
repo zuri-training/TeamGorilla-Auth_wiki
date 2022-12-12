@@ -1,6 +1,6 @@
 import React from 'react'
  
-import './template.css'
+import "../../../assets/styles/Template.css";
 
 export default function Template ({
     src,
