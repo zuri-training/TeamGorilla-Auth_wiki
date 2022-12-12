@@ -30,8 +30,8 @@ function Header() {
                 <a href='/faq' className={`nav ${displayV}`}>FAQ</a>
         </div>
         <div>
-            <a className={`nav ${displayV}`}>Log In</a>
-            <a className={`header-btn ${displayV}`}>Sign up</a>
+            <a href='/login' className={`nav ${displayV}`}>Log In</a>
+            <a href='/register' className={`header-btn ${displayV}`}>Sign up</a>
         </div>
     </div>
   )

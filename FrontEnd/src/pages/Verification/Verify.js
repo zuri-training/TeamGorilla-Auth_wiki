@@ -8,7 +8,7 @@ function verify() {
     <main>
     <div class="Main-Container">
     <div class="Left-Form-Container">
-        <img class="Icon" src="/Assets/verify.png" alt="" >
+        <img class="Icon" src="/Assets/verify.png" alt="" />
 
     </div>
 

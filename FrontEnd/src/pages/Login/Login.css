@@ -75,9 +75,7 @@ border: 1px solid #DDE1E8;
 outline: none;
 padding-left: 10px;
 }
-#inputs:hover{
-    border:none;
-}
+
 
 .lower-link{
     display: flex;
