@@ -24,6 +24,7 @@ const registerUser = asyncHandler( async (req, res) => {
     try{
 
         const {firstName, lastName, email, password} = req.body
+		console.log(req.body)
         
         const verifyToken = uuidv4();
 
@@ -62,7 +63,7 @@ const registerUser = asyncHandler( async (req, res) => {
 		}
 	} catch (error) {
 		res.status(404);
-		throw new Error(error);
+		throw new Error(error.message);
 	}
 });
 
