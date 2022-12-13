@@ -1,4 +1,5 @@
 const {Schema, model} = require('mongoose');
+const mongoose = require('mongoose');
 
 const commentSchema = new Schema (
     {
@@ -6,6 +7,7 @@ const commentSchema = new Schema (
             type: String,
             required: true
         },
+
         author: {
             type: mongoose.Schema.ObjectId,
             ref: "User",
@@ -19,12 +21,14 @@ const commentSchema = new Schema (
             type:[String],
             default:[]
         },
-        documentation_id: {
-            type: ObjectId,
-            required: true,
-            ref: 'Documentation'
+        author: {
+            type: mongoose.Schema.Types.ObjectID, ref: 'user'
         },
+        documentationID: {
+            type: mongoose.Schema.Types.ObjectID, ref: 'documentation'
+        }
     },
+
     {timestamps: true},
 );
 

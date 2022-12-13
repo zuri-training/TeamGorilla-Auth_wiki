@@ -1,6 +1,8 @@
 const Cmts = require("../models/commentModel");
 
 const asyncHandler = require("express-async-handler");
+const User = require("../models/userModel");
+
 
 
 /**
@@ -10,30 +12,37 @@ const asyncHandler = require("express-async-handler");
  * @access Public
 */
 
+
 const createComment =  asyncHandler( async (req, res) => {
+
     try{
-        const body = await req.body;
-        const userId = req.user.id;
-        const docId = req.params.id
+        
+        const author = req.user.id;
+        const documentationID = req.params.id;
+
 
         const comment = await Cmts.create({
-            body: body,
+            body: req.body,
             author: userId,
             documentation_id: docId
-
         });
-        if(comment){
-            const createdComment = await comment.save();
+        
+        if(comment) {
             res.status(201).json({
                 success: true,
-                comment: createdComment
+                message: "Comment Created",
+                comment
             })
         }
+        
     }catch(err){
-        res.status(500)
-        throw new Error(err.message)
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
     }
 });
+
 
 
 /**
@@ -52,9 +61,15 @@ const commentReaction = asyncHandler( async (req, res) => {
 
         // check if comment exists
         const comment = await Cmts.findOne(id);
-
-        if(!comment) {
-            return res.status(400).json({
+    if(!comment){
+        res.status(404).json({
+            success: false,
+            message: `comment with id ${commentId} not found`
+        })
+    }
+    else{
+        if(comment.like.includes(userId)){
+            res.status(200).json({
                 success: false,
                 message: "Comment not found"
             })
@@ -128,6 +143,8 @@ const commentReaction = asyncHandler( async (req, res) => {
 
 
 module.exports = {
+
     createComment,
     commentReaction
+
 }

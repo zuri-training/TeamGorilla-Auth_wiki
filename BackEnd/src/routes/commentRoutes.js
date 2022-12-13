@@ -10,4 +10,9 @@ const { authenticate } = require("../middleware/authMiddleware");
 router.post('/comment', createComment);
 router.patch('/:id', authenticate, commentReaction);
 
-module.exports = router
+
+router.post('/:id',[
+    check("body", "Make sure comment is not empty").exists()
+], authenticate, createComment);
+
+module.exports = router;

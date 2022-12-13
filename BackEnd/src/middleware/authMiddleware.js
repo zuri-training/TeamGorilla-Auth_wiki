@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
+require('dotenv').config()
 
 
 const authenticate = asyncHandler(async (req, res, next) => {
@@ -35,7 +36,7 @@ const authenticate = asyncHandler(async (req, res, next) => {
 // Generate jwt token
 const generateToken = (id) => {
 	    return jwt.sign( { id } , process.env.JWT_SECRET, {
-		expiresIn: process.env.JWT_EXPIRE,
+		expiresIn: process.env.JWT_EXPIRE
 	});
 };
 

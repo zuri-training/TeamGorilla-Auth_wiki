@@ -1,7 +1,7 @@
 import React from 'react'
-import './Library.css'
+import "../../assets/styles/Library.css";
 import LibraryHeader from './LibraryHeader'
-import './AuthLibrary.css'
+import "../../assets/styles/AuthLibrary.css";
 import { BsDownload, BsFillChatSquareTextFill } from 'react-icons/bs'
 import Thumbs from './Thumbs'
 

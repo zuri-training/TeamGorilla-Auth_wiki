@@ -1,6 +1,6 @@
 import { React, useState, useRef, useEffect } from 'react'
 import { FiPlus, FiMinus } from 'react-icons/fi'
-import './structure.css'
+import "../../../assets/styles/Structure.css";
 
 export default function Question ({
     Asked,

@@ -1,4 +1,3 @@
-
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
@@ -6,12 +5,9 @@ const connectDB = require("./src/database/db");
 
 // Initialize Express
 const app = express();
-
-const { json } = require("express");
 const userRoutes = require('./src/routes/userRoutes');
 const docRoutes = require("./src/routes/docRoutes");
-const commentRoutes = require("./src/routes/commentRoutes")
-const uri = process.env.MONGODB_URI;
+const commentRoutes = require("./src/routes/commentRoutes");
 
 
 // connect to database
@@ -22,6 +18,18 @@ app.use(express.json());
 app.use(cors())
 app.use(express.urlencoded({extended: false}));
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+    );
+    next();
+  });
 
 //routes
 app.use('/api/user', userRoutes);
