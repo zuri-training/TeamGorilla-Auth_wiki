@@ -1,10 +1,15 @@
-const express = require("express");
-const router = express.Router();
-const { check } = require("express-validator");
-const {createComment} = require('../controllers/commentController');
-const {authenticate} = require('../middleware/authMiddleware');
+const { createComment, commentReaction } =  require('../controllers/commentController');
 
-// comment User Route   
+const express = require("express");
+
+const router = express.Router();
+
+const { authenticate } = require("../middleware/authMiddleware");
+
+// comment User Routes
+router.post('/comment', createComment);
+router.patch('/:id', authenticate, commentReaction);
+
 
 router.post('/:id',[
     check("body", "Make sure comment is not empty").exists()

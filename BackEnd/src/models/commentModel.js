@@ -7,12 +7,17 @@ const commentSchema = new Schema (
             type: String,
             required: true
         },
-         
-        Like: {
+
+        author: {
+            type: mongoose.Schema.ObjectId,
+            ref: "User",
+            required: true
+        },    
+        liked: {
             type:[String],
             default:[]
         },
-        hate: {
+        unliked: {
             type:[String],
             default:[]
         },

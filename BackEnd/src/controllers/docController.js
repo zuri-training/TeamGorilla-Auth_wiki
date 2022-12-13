@@ -114,14 +114,14 @@ const downloadDoc = asyncHandler( async (req, res) => {
 /**
  * @desc Like and Dislike documentations
  * @route PATCH
- * @route /api/docs/reaction
+ * @route /api/docs/id
  * @access Public
 */
 
 const docReaction = asyncHandler( async (req, res) => {
     // Like and Dislike routes
     try {
-        // get id from request parameter
+        // get document id from request parameter
         const { id } = req.params;
 
         // check  if document exists
@@ -141,7 +141,7 @@ const docReaction = asyncHandler( async (req, res) => {
         // fetch user id
         const user = req.user.id;
 
-        // if the user likes
+        // if the user likes documentation
         if(reaction === "like") {
             const checkLike = doc.liked.includes(user);
             if(checkLike) {
@@ -163,7 +163,7 @@ const docReaction = asyncHandler( async (req, res) => {
             }
         }
 
-        // if the user dislikes
+        // if the user dislikes documentation
         if (reaction === "dislike") {
             const checkLike = doc.unlike.includes(user);
             if(checkLike) {
