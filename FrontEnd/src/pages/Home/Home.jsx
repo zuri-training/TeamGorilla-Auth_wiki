@@ -7,13 +7,19 @@ import partner1 from '../../assets/images/partner1.png'
 import partner2 from '../../assets/images/partner2.png'
 import partner3 from '../../assets/images/slack.png'
 import partner4  from '../../assets/images/Vector.png'
+import hands  from '../../assets/images/hands.svg'
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { FaRegFileAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+
+
+
 
 
 
 export default function Home() {
+
 
     return(
         <div className="hero" >
@@ -22,7 +28,8 @@ export default function Home() {
                 <p>Authwiki is a library base platform thas servrs as storage of various authentication codes to speed up development process</p>
              </div>
              <div className="Explore">
-                <button><a href="http://">Explore Now</a></button>
+                <button><a href="http://">Explore Now</a>  <FaArrowRight />
+                </button>
                 
              </div>
              <div className="code-codes">
@@ -49,11 +56,11 @@ export default function Home() {
              </div>
 
              
-<div class="wrapper">
+<div className="wrapper">
 
-<div class="box">
+<div className="box">
 
-  <div class="content">
+  <div className="content">
   <h1 className="pinkCol"><FaRegFileAlt /></h1>
    <h1 className="content1">Documentation</h1>
   The use, operation, maintenance of the authentication codes are
@@ -78,15 +85,53 @@ export default function Home() {
    We provide a download option for Authenticated and verified 
    users to use the codes when they please and in any instance.
    </div>
-  
+</div>
+</div>
+
+{/* ========================About Section */}
+<div className="About-section">
+      <div className="about-1">
+      <h1 className="rec"><img src={hands} alt='part'/></h1>
+      </div>
+
+      <div className="about">
+         <h2 className="about-info">About Us</h2>
+         <p className="about-info-2">Find out about who we are</p>
+         <p className="about-info-3">We are a group of tech savvy individuals with an aim to elevate the technology industry through speed and
+             agility. One of the solutions we are proud to offer 
+            is our authentication library. Our team is made up of tech enthusiast with a forward driven mind set.</p>
+
+         <p className="about-info-4"> <a href="http://">Find Out More</a> <FaArrowRight /></p>
+         {/* <p className="text"></p> */}
+          
+         
+      </div>
 </div>
 
 
+
+
+
+<div class="Card">
+  <div class="CardInner">
+  <div className="cardUpdate">
+      <h3 className="h3">Do you want to get <br/> updates from AuthWiki?</h3>
+      <p className="pppp">Sign up for Our Newsletter</p>
+  </div>
+  <div class="container">
+    <div class="InputContainer">
+      <input placeholder="enter your email address"/>
+   
+    </div>
+  </div>
+ </div>
 </div>
 
 
 
-        </div>
+ </div>
+
+        
 
         
     )
