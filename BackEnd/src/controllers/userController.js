@@ -169,7 +169,7 @@ const getAllUsers = asyncHandler( async (req, res) => {
 const getUser = asyncHandler(async (req, res) => {
 
     try {
-        const user = await User.findById(req.user);
+        const user = await User.findById(req.user.id);
 
         if(!req.user){
             res.status(404)
