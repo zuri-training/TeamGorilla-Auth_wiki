@@ -39,13 +39,17 @@ const getCurrentUser = () => {
 const reset = () => {
 
 }
+const signOut = () => {
+    localStorage.removeItem('user')
+}
 
 const AuthService = {
     register,
     login,
     getCurrentUser,
     getUserEmail,
-    reset
+    reset,
+    signOut
 };
 
 export default AuthService;

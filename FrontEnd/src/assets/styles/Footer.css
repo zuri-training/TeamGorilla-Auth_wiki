@@ -3,8 +3,8 @@
     position: relative;
     width: 100%;
     height:300px;
-    bottom:0px;
-    left:0px;
+    /* bottom:0px;
+    left:0px; */
     background-color: #0A2145;
     color: white;
     display: flex;

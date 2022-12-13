@@ -68,9 +68,9 @@ export default function Home() {
         <p>AuthWiki serves as a Storage of Authentication codes</p>
       </div>
 
-      <div class="wrapper">
-        <div class="box">
-          <div class="content">
+      <div className="wrapper">
+        <div className="box">
+          <div className="content">
             <h1 className="pinkCol">
               <FaRegFileAlt />
             </h1>
@@ -80,8 +80,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="box">
-          <div class="content">
+        <div className="box">
+          <div className="content">
             <h1 className="pinkCol">
               <FaUsers />
             </h1>
@@ -91,8 +91,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="box">
-          <div class="content11">
+        <div className="box">
+          <div className="content11">
             <h1 className="bluurur">
               <FaCloudDownloadAlt />
             </h1>
