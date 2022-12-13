@@ -171,7 +171,7 @@ const getUser = asyncHandler(async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
 
-        if(!req.user){
+        if(!user){
             res.status(404)
             throw new Error('User not found')
         }
