@@ -82,12 +82,13 @@ const verifyAccount = asyncHandler(async (req, res) => {
 			verifyUser.isVerified = true;
 			await verifyUser.save();
 
-			res.status(200).json({
-                success: true,
-				message: 'Verification Successful. You can login now',
-				//isVerified: verifyUser.isVerified,
-                user: verifyUser
-			});
+// 			res.status(200).json({
+//                 success: true,
+// 				message: 'Verification Successful. You can login now',
+// 				//isVerified: verifyUser.isVerified,
+//                 user: verifyUser
+// 			});
+			res.redirect('https://auth-wiki-leroicodes.vercel.app/login')
 		}
 	} catch (error) {
 		res.status(500);
