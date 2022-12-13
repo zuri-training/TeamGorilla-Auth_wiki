@@ -1,5 +1,5 @@
 const { createComment, commentReaction } =  require('../controllers/commentController');
-
+const { check } = require("express-validator");
 const express = require("express");
 
 const router = express.Router();
