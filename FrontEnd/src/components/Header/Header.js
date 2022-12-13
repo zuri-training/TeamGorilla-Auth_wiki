@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Header.css'
+import '../../assets/styles/Header.css'
 import logo from '../../assets/images/Authwiki.png'
 
 function Header() {

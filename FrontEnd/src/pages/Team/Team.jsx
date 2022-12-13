@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../assets/styles/Team.css";
-import Template from './template/template'
+import Template from './template/Template'
 
 export default function Team () {
     return (

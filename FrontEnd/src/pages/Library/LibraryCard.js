@@ -1,7 +1,9 @@
 import React, {useState}from 'react'
 import {BsDownload, BsHeart, BsHeartFill} from 'react-icons/bs'
+import {useNavigate} from 'react-router-dom'
 
 function LibraryCard() {
+  const Navigate = useNavigate()
     const [checked, setChecked] = useState(false);
   const check = () => {
     if (checked === false){
@@ -13,15 +15,15 @@ function LibraryCard() {
   }
   return (
     <div className='card'>
-          <h3>AuthName</h3>
-          <p>brief description about what auth does</p>
+          <h3>Jwt Web token Authentication</h3>
+          <p>JSON Web Token is an open industry standard used to share information between two entities, usually a client (like your app’s frontend) and a server (your app’s backend).</p>
           <div className='el'>
             <span><BsDownload /></span>
-            <p>200</p>
+            <p>400</p>
           { checked ? <span onClick={() => check()}><BsHeartFill /></span>:
           <span onClick={() => check()}><BsHeart /></span>}
           <p>200</p>
-          <button>View</button>
+          <button onClick={() => {Navigate('/library/auth')}}>View</button>
           </div>
         </div>
   )

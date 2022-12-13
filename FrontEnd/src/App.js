@@ -20,8 +20,8 @@ function App() {
        {/* <Footer />  */}
       <BrowserRouter>
         <Routes>
-          {/* <Route index element={<Home/>}/> */}
-          <Route index element={<Login/>}/>
+          <Route index element={<Home/>}/>
+          {/* <Route index element={<Login/>}/> */}
           <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
           <Route path='/team' element={<Team/>}/>  
