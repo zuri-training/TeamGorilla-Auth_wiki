@@ -18,24 +18,25 @@ function App() {
     <div className="App">
       <Header />
        {/* <Footer />  */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route index element={<Home/>}/>
+          {/* <Route index element={<Home/>}/> */}
+          <Route index element={<Login/>}/>
           <Route path='/library' element={<Library/>}/>
           <Route path='/faq' element={<FAQ/>}/>
           <Route path='/team' element={<Team/>}/>  
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Signup/>} />
           <Route path='/Reset' element={<Reset/>} />
-          <Route path='/verification' element={<Verification/>}/>
+          <Route path='/verification' element={<Verify/>}/>
           <Route path='/library/auth' element={<AuthLibrary/>} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* <AuthLibrary /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
       {/* <Reset /> */}
-      <Team />
+      {/* <Team /> */}
       {/* <Verify /> */}
       <Footer /> 
     </div>
