@@ -1,8 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../../assets/styles/Header.css'
 import logo from '../../assets/images/Authwiki.png'
+import AuthService from '../../assets/api/auth.service'
 
 function Header() {
+
+
+    const [user, setUser] = useState({})
+    useEffect(() => {
+      setUser(AuthService.getCurrentUser())
+    }, [user])
+
+    const handleSubmit = () => {
+      AuthService.signOut()
+      setUser({})
+    }
     // const [isVisible, setIsVisible] = useState(false)
     const [displayV, setDisplayV] = useState('')
     const toggle = () => {
@@ -14,7 +26,8 @@ function Header() {
     }
   return (
     <div className='header'>
-        <div className="logo">
+     <div className='header-container'>
+     <div className="logo">
         <img src={logo} alt='Authwiki-logo'/>
         </div>
         <div className="hamburger-lines" onClick={() => { toggle()}}>
@@ -29,10 +42,21 @@ function Header() {
                 <a href='/team' className={`nav ${displayV}`}>Our Team</a>
                 <a href='/faq' className={`nav ${displayV}`}>FAQ</a>
         </div>
-        <div>
+        { user? 
+          <div>
+            <a href='/register' className={`header-btn ${displayV}`} onClick={(e) => handleSubmit(e)}>Sign out</a>
+          </div> 
+          :
+          <div>
             <a href='/login' className={`nav ${displayV}`}>Log In</a>
             <a href='/register' className={`header-btn ${displayV}`}>Sign up</a>
         </div>
+        }
+        {/* <div>
+            <a href='/login' className={`nav ${displayV}`}>Log In</a>
+            <a href='/register' className={`header-btn ${displayV}`}>Sign up</a>
+        </div> */}
+     </div>
     </div>
   )
 }
