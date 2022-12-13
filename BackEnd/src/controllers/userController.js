@@ -89,10 +89,8 @@ const verifyAccount = asyncHandler(async (req, res) => {
 			});
 		}
 	} catch (error) {
-		res.status(500).json({
-			message: "fuck you"
-		});
-		// throw new Error(error.message);
+		res.status(500);
+		throw new Error(error.message);
 		
 	}
 });
@@ -171,7 +169,7 @@ const getAllUsers = asyncHandler( async (req, res) => {
 const getUser = asyncHandler(async (req, res) => {
 
     try {
-        //const user = await User.findById(req.user);
+        const user = await User.findById(req.user);
 
         if(!req.user){
             res.status(404)
@@ -179,7 +177,7 @@ const getUser = asyncHandler(async (req, res) => {
         }
         res.status(200).json({
             success: true,
-            user: req.user,
+            user: user,
         }); 
         
     } catch(err){
