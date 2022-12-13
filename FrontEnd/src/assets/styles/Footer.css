@@ -33,6 +33,7 @@
 .footer a{
     text-decoration: none;
     display: block;
+    color: white !important;
 
 }
 .footer .footer-items p, .footer .footer-items a {

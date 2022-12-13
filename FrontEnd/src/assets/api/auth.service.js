@@ -36,12 +36,16 @@ const login = async (email, password) => {
 const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem('user'));
 }
+const reset = () => {
+
+}
 
 const AuthService = {
     register,
     login,
     getCurrentUser,
-    getUserEmail
+    getUserEmail,
+    reset
 };
 
 export default AuthService;

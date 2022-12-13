@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'
+import '../../assets/styles/Footer.css';
 import logo from '../../assets/images/Authwiki.png'
 
 
@@ -15,17 +15,17 @@ function Footer() {
     </div>
     <div className="footer-items a">
         <h1>Authwiki</h1>
-        <a>About Us</a>
-        <a>Careers</a>
-        <a>Contact Us</a>
-        <a>Our Team</a>
+        <a href='/'>Home</a>
+        <a href='/library'>Library</a>
+        <a href='/team'>Our Team</a>
+        <a href='/faq'>FAQ</a>
     </div>
     <div className="footer-items b">
         <h1>Policies</h1>
-        <a>Terms of service</a>
-        <a>Privacy Policy</a>
-        <a>Cookies Policy</a>
-        <a>Faq</a> 
+        <a href='/'>Terms of service</a>
+        <a href='/'>Privacy Policy</a>
+        <a href='/'>Cookies Policy</a>
+        <a href='/faq'>Faq</a> 
     </div>
     <div className="footer-items c">
         <h1 className='i'>Socials</h1>
