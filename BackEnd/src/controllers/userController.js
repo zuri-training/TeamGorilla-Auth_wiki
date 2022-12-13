@@ -44,7 +44,7 @@ const registerUser = asyncHandler( async (req, res) => {
 			const text = `<h1>Email Confirmation</h1>
         <h2>Hello ${firstName}</h2>
         <p>Verify your email address to complete the signup and login to your account to Authwiki</p>
-        <a href='https://localhost:8000/user/confirm/${user.verificationCode}'> Click here</a>
+        <a href='http://localhost:8000/api/user/register/${user.verificationCode}'> Click here</a>
 
         </div>`;
 
@@ -66,38 +66,41 @@ const registerUser = asyncHandler( async (req, res) => {
 	}
 });
 
-/**
- * @desc Verify User Email
- * @route GET
- * @route /api/user/register
- * @access Public
- */
+
 const verifyAccount = asyncHandler(async (req, res) => {
 	try {
-		const { verificationCode } = req.params;
+		const code = req.params.code;
 		// compare the confimation code
 
-		const verifyUser = await User.findOne({ verificationCode });
+		const verifyUser = await User.findOne({ verificationCode:code });
 
 		if (!verifyUser) {
 			res.status(404);
 			throw new Error('User not found');
 		} else {
-			confirmUser.isVerified = true;
+			verifyUser.isVerified = true;
 			await verifyUser.save();
 
 			res.status(200).json({
                 success: true,
 				message: 'Verification Successful. You can login now',
-				//isVerified: confirmUser.isVerified,
+				//isVerified: verifyUser.isVerified,
                 user: verifyUser
 			});
 		}
 	} catch (error) {
 		res.status(500);
 		throw new Error(error.message);
+		
 	}
 });
+const try1 = asyncHandler(async (req, res) => {
+	const id = await req.params.id;
+	res.status(201).json({
+		id
+	})
+
+})
 
 /**
  * @desc Login a user
@@ -145,7 +148,17 @@ const loginUser = asyncHandler(async (req, res) => {
 	});
 });
 
-
+const getAllUsers = asyncHandler( async (req, res) => {
+	let users;
+	users = await User.find();
+	if(users === []){
+		res.status(500)
+		throw new Error('what is wrong')
+	}
+	res.status(200).json({
+		users
+	})
+})
 
 /**
  * @desc Get user profile
@@ -154,6 +167,7 @@ const loginUser = asyncHandler(async (req, res) => {
  * @access Private/User
  */
 const getUser = asyncHandler(async (req, res) => {
+
     try {
         const user = await User.findById(req.user.id);
 
@@ -230,7 +244,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
         <h2>Hello ${user.firstName}</h2>
         <p>You are receiving this email because you (or someone else) has
          requested the reset of a password</p>
-           <a href='https://localhost:8000/resetpassword/${resetToken}'> Click here to reset your password</a>
+           <a href='http://localhost:8000/api/user/resetpassword/${resetToken}'> Click here to reset your password</a>
 
         </div>`;
 
@@ -300,4 +314,5 @@ module.exports = {
     updateUser,
     forgotPassword,
     resetPassword,
+	getAllUsers
 }
