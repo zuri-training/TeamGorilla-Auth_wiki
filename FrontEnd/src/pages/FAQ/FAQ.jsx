@@ -1,5 +1,5 @@
 import React from 'react'
-import Question from './structure/Structure'
+import Question from './structure/structure'
 import "../../assets/styles/FAQ.css";
 
 export default function FAQ () {
