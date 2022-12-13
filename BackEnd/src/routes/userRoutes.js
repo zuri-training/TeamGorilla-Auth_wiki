@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
-const {loginUser, registerUser, verifyAccount, getUser, updateUser, forgotPassword, resetPassword } = require('../controllers/userController');
+const {loginUser, getAllUsers, registerUser, verifyAccount, getUser, updateUser, forgotPassword, resetPassword } = require('../controllers/userController');
 const {authenticate} = require('../middleware/authMiddleware')
 
 // Login User Route
@@ -18,8 +18,9 @@ router.post('/register', [
     check("password", "Password required and must be a minimum of 8 characters").exists().isLength({ min : 8 })
 ], registerUser);
 
-router.get('/confrim/:verificationCode', verifyAccount);
-router.get('/me', authenticate, getUser);
+router.get('/register/:code', verifyAccount);
+// router.get('/me', getAllUsers);
+router.get('/me', authenticate , getUser)
 router.patch('/me', authenticate, updateUser);
 router.post('/forgotpassword', forgotPassword);
 router.put('resetpassword/:resetToken', resetPassword);

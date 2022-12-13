@@ -36,8 +36,8 @@ const authenticate = asyncHandler(async (req, res, next) => {
 // Generate jwt token
 const generateToken = (id) => {
 	    return jwt.sign( { id } , process.env.JWT_SECRET, {
-		expiresIn: Number(process.env.JWT_EXPIRE,
-	)});
+		expiresIn: process.env.JWT_EXPIRE
+	});
 };
 
 
