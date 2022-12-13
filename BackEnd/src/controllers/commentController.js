@@ -7,8 +7,8 @@ const User = require("../models/userModel");
 
 const createComment = asyncHandler(async (req, res) => {
     try{
-        const userId = await req.session.userId;
-        const author = await User.findOne({userId});
+        
+        const author = req.user.id;
         const documentationID = req.params.id;
 
         const {body} =  await req.body;

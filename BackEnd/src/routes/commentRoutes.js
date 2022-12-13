@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
-const commentController = require('../controllers/commentController');
-const { checkIfLoginedIn } = require('../middleware/checkLoginmiddleware');
+const {createComment} = require('../controllers/commentController');
+
 
 // comment User Route   
 
 router.post('/:id',[
     check("body", "Make sure comment is not empty").exists()
-], checkIfLoginedIn, commentController.createComment);
+], authenticate, createComment);
 
 module.exports = router;
