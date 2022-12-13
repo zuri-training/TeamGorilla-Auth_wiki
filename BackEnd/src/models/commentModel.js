@@ -11,11 +11,11 @@ const commentSchema = new Schema (
             ref: "User",
             required: true
         },    
-        Like: {
+        liked: {
             type:[String],
             default:[]
         },
-        hate: {
+        unliked: {
             type:[String],
             default:[]
         },

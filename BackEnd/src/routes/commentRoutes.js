@@ -1,9 +1,13 @@
-const express = require("express");
-const router = express.Router();
-const { check } = require("express-validator");
-const commentController = require('../controllers/commentController');
+const { createComment, commentReaction } =  require('../controllers/commentController');
 
-// comment User Route   
-router.post('/comment', commentController.createComment)
+const express = require("express");
+
+const router = express.Router();
+
+const { authenticate } = require("../middleware/authMiddleware");
+
+// comment User Routes
+router.post('/comment', createComment);
+router.patch('/:id', authenticate, commentReaction);
 
 module.exports = router
