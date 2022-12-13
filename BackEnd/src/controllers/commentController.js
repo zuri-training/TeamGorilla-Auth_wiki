@@ -134,10 +134,11 @@ const commentReaction = asyncHandler( async (req, res) => {
             }
         }
 
-    } catch (error) {
-        res.status(500)
-        throw new Error(error.message);
-    }
+    } 
+}catch (error) {
+    res.status(500)
+    throw new Error(error.message);
+}
 });
 
 
