@@ -14,11 +14,17 @@ POST {{url}}/api/user/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName" : "test0004",
+    "firstName" : "test0006",
     "lastName" : "test",
-    "email" : "chukunwaoghor@gmail.com",
-    "password" : "test12345"
+    "email" : "test2223@gmail.com",
+    "password" : "test12345",
+    "isAdmin" : false
 }
 
 ###
-GET {{url}}/user/confirm/41942069-cdc5-42be-9f7c-57201cbbb2be HTTP/1.1
+POST {{url}}/api/comment HTTP/1.1
+Content-Type: application/json
+
+{
+    "body" : "Nice Docomentation"
+}
