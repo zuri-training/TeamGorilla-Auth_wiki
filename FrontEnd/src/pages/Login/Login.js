@@ -73,8 +73,9 @@ export default function Login() {
           
         </p>
         <h2>Welcome Back!</h2>
+{/* <div className="UpperLink"><img className="Google-icon"src="/Assets/google.png" alt="" /> <span className="alt-Auth">Log in with Google</span></div> */}
         <div className="hrwrapper"><hr id="hrline"/>OR LOGIN WITH EMAIL<hr id="hrline" /></div>
-    {/* <div className="UpperLink"><img className="Google-icon"src="/Assets/google.png" alt="" /> <span className="alt-Auth">Log in with Google</span></div> */}
+    
     <form>
     <input id='email' 
     ref={emailRef} 
@@ -142,7 +143,7 @@ export default function Login() {
         <button id="submit" type="submit" disabled={ !validEmail || !validPassword ? true : false}
         onClick={(e) => handleSubmit(e)}>Log in</button>
     </form>
-    <hr/>
+    <hr id="Base-hr"/>
     <div className="base-link">Dont have an account yet?  <a href="/register">Sign Up</a></div>
     </div>
 

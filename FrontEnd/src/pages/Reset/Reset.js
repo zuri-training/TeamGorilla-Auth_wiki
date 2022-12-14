@@ -59,7 +59,7 @@ function Reset() {
         <h2>Forgotten your password?</h2>
         <p>Follow these easy steps to reset your password</p>
     <form>
-        {/* <label for="Email"></label> */}
+        <label htmlFor="Email">Enter your Account E-mail</label> 
         <input id='email' 
     ref={emailRef} 
     autoComplete="off" 
