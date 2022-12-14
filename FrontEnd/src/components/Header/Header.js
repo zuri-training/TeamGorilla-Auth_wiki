@@ -47,9 +47,9 @@ function Header() {
             <a href='/register' className={`header-btn ${displayV}`} onClick={(e) => handleSubmit(e)}>Sign out</a>
           </div> 
           :
-          <div>
-            <a href='/login' className={`nav ${displayV}`}>Log In</a>
-            <a href='/register' className={`header-btn ${displayV}`}>Sign up</a>
+          <div className="mobile-flex">
+            <a href='/login' className={`nav log mag ${displayV}`}>Log In</a>
+            <a href='/register' className={`header-btn mag ${displayV}`}>Sign up</a>
         </div>
         }
         {/* <div>

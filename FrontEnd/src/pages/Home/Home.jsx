@@ -27,9 +27,10 @@ export default function Home() {
       </div>
       <div className="Explore">
         <button>
-          <a href="http://">Explore Now</a>
+          <a href="/library">Explore Now</a>
         </button>
       </div>
+      <div className="codes">
       <div className="code-codes">
         <h1 className="code1">
           <img src={code3} alt="main" />
@@ -41,11 +42,12 @@ export default function Home() {
           <img src={code2} alt="main" />
         </h1>
       </div>
+      </div>
       <div className="brand">
         <div className="brands-with">
           <h1 className="brand1">Brands Who Trust Us</h1>
           <p className="brand2">
-            Meet our collaorative partners from across the world
+            Meet our collaborative partners from across the world
           </p>
           <div className="Part">
             <h1 className="partner">
@@ -103,6 +105,7 @@ export default function Home() {
         </div>
       </div>
 
+      <section className='home_about'>
       <div className="about_section">
          <img src={about} alt="about-us" className="about_img"/>
          <div className="about_text">
@@ -113,10 +116,11 @@ export default function Home() {
                through speed and agility. One of the solutions we are proud to offer is our authentication library.
                Our team is made up of tech enthusiast with a forward driven mind set.
             </p>
-            <Link to='/team' className="about_link">Find Out More <BsArrowRight className="about-arrow"/></Link>
+            {/* <Link to='/team' className="about_link">Find Out More <BsArrowRight className="about-arrow"/></Link> */}
          </div>
       </div>
 
+      </section>
       <div className="testimonial_section">
          <h2>Our Happy Users</h2>
          <div className="testimonials__">
@@ -147,6 +151,7 @@ export default function Home() {
          </div>
       </div>
 
+      {/* <section className='newsletter'> */}
       <div className="newsletter_section">
          <div className="newsletter_text">
            <h3 style={{fontSize: '24px'}}>Do you want to get updates from AuthWiki?</h3>
@@ -154,9 +159,11 @@ export default function Home() {
          </div>
          <div className="newsletter_input">
             <input type="email" name="email" id="email" placeholder="enter your email address" size="50" className="newsletter_email" />
-            <BsArrowRight className="newsletter_arrow" />
+            <BsArrowRight className="newsletter_arrow"  />
          </div>
-      </div>
+         </div>
+      {/* </section> */}
+      
     </div>
   );
 }
