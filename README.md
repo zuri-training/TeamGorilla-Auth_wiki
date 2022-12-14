@@ -112,6 +112,7 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 3. [Oluwabamise Olatunji](https://github.com/Analog-ng)
 4. [Omosaye Moses Iseoluwa](https://github.com/theselaw)
 5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
+6. [Oluwasijibomi Solola]()
 
 
 
