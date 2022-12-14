@@ -106,12 +106,22 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
   * git push origin branchName - This creates the branch remotely and pushes to that branch on the Github
 * Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
-# Team Member
+# Team Members
 1. [Brandon Armand Nyamkimbi](https://github.com/Brandonarmand96)
 2. [Olubimi Michael Olumide](https://github.com/olumide12-cell)
 3. [Oluwabamise Olatunji](https://github.com/Analog-ng)
 4. [Omosaye Moses Iseoluwa](https://github.com/theselaw)
 5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
+6. [Oluwasijibomi Solola](https://github.com/ossolola)
+7. [Erickson Akhabue]
+8. [Nwaoghor Chukunweiken]
+9. [Grace Eyiolawi]
+10. [Olayinka Ismaila]
+11. [Fridah Kawala]
+12. [Dominion Owiku]
+13. [Victor Ajayi]
+14. [Aminat Abdulwaheed]
+15. [Obe Theresa]
 
 
 
