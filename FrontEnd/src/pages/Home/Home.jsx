@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className="Explore">
         <button>
-          <a href="http://">Explore Now</a>
+          <a href="/library">Explore Now</a>
         </button>
       </div>
       <div className="codes">
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="brands-with">
           <h1 className="brand1">Brands Who Trust Us</h1>
           <p className="brand2">
-            Meet our collaorative partners from across the world
+            Meet our collaborative partners from across the world
           </p>
           <div className="Part">
             <h1 className="partner">
@@ -116,7 +116,7 @@ export default function Home() {
                through speed and agility. One of the solutions we are proud to offer is our authentication library.
                Our team is made up of tech enthusiast with a forward driven mind set.
             </p>
-            <Link to='/team' className="about_link">Find Out More <BsArrowRight className="about-arrow"/></Link>
+            {/* <Link to='/team' className="about_link">Find Out More <BsArrowRight className="about-arrow"/></Link> */}
          </div>
       </div>
 
@@ -159,7 +159,7 @@ export default function Home() {
          </div>
          <div className="newsletter_input">
             <input type="email" name="email" id="email" placeholder="enter your email address" size="50" className="newsletter_email" />
-            <BsArrowRight className="newsletter_arrow" />
+            <BsArrowRight className="newsletter_arrow"  />
          </div>
          </div>
       {/* </section> */}
