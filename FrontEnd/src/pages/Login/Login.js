@@ -143,6 +143,7 @@ export default function Login() {
         onClick={(e) => handleSubmit(e)}>Log in</button>
     <hr/>
     <div className="base-link">Dont have an account yet?  <a href="/register">Sign Up</a></div>
+    </form>
     </div>
 
     </div>
