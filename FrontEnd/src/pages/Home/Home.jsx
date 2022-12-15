@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "../../assets/styles/Home.css";
 import code1 from "../../assets/images/main1.png";
 import code2 from "../../assets/images/main2.png";
 import code3 from "../../assets/images/main3.png";
@@ -13,7 +13,6 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { FaRegFileAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs"
-import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (

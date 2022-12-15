@@ -15,6 +15,9 @@ function Header() {
       AuthService.signOut()
       setUser({})
     }
+    const signOut = () => {
+
+    }
     // const [isVisible, setIsVisible] = useState(false)
     const [displayV, setDisplayV] = useState('')
     const toggle = () => {
@@ -43,12 +46,12 @@ function Header() {
                 <a href='/faq' className={`nav ${displayV}`}>FAQ</a>
         </div>
         { user? 
-          <div>
-            <a href='/register' className={`header-btn ${displayV}`} onClick={(e) => handleSubmit(e)}>Sign out</a>
+          <div className="mobile-flex">
+            <a href='/register' className={`header-btn mag si ${displayV}`} onClick={(e) => signOut(e)}>Sign out</a>
           </div> 
           :
           <div className="mobile-flex">
-            <a href='/login' className={`nav log mag ${displayV}`}>Log In</a>
+            <a href='/login' className={`nav log mag ${displayV}`}>Sign In</a>
             <a href='/register' className={`header-btn mag ${displayV}`}>Sign up</a>
         </div>
         }

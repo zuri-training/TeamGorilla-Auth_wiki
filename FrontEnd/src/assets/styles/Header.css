@@ -32,7 +32,7 @@
     height: 48px;
     border-radius: 8px;
     font-family:'Open Sans';
-    font-style: 600;
+    font-style: normal;
     font-size: 20px;
     line-height: 28px; 
     color: inherit;
@@ -102,16 +102,23 @@
     }
     .mobile-flex{
         display: flex;
-        width: 50% !important;
+        width: 90% !important;
         margin: auto;
+        /* align-items: center; */
     }
     .log{
-        border: 1px solid linear-gradient(180deg, #F06243 0%, #EE3C4C 100%);
+        border: 1px solid  #f76f7a;
         border-radius: 8px;
     }
     .mag {
         /* width: */
         padding: auto;
         margin: 0 20px;
+        width: 115px !important;
+        margin-bottom: 15px;
+    }
+    .mobile-flex .si {
+        margin: 0 auto !important;
+        margin-bottom: 15px !important;
     }
 }
