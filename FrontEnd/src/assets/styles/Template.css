@@ -1,6 +1,7 @@
 .team-container {
     display: inline-block;
     width: fit-content;
+    margin: auto;
 }
 .member-img {
     object-fit: cover;
