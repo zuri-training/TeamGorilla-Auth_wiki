@@ -113,18 +113,15 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 4. [Omosaye Moses Iseoluwa](https://github.com/theselaw)
 5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
 6. [Oluwasijibomi Solola](https://github.com/ossolola)
-7. [Erickson Akhabue](https://github.com/Eriicc01)
-8. [Nwaoghor Praise](https://github.com/NwaoghorPraise2)
+7. [Erickson Akhabue]
+8. [Nwaoghor Chukunweiken]
 9. [Grace Eyiolawi]
 10. [Olayinka Ismaila]
-11. [Fridah Kawala](https://github.com/fridahjosephine)
+11. [Fridah Kawala]
 12. [Dominion Owiku]
-13. [Victor Ajayi](https://github.com/AAJAYIVICTOR)
-14. [Aminat Abdulwaheed](https://github.com/AminatAminat)
+13. [Victor Ajayi]
+14. [Aminat Abdulwaheed]
 15. [Obe Theresa]
-16.[Blessing Ogwu](https://github.com/personifybless)
-17.[Ebiloma Aliyu](https://github.com/Ebiloma01)
-18.[Ademola Ogunlalu]
 
 
 
