@@ -11,3 +11,18 @@
     gap: 3.6rem 2.5rem;
     margin-block: 7rem;
 }
+@media screen and (max-width: 1270px) {
+    .team-members{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 955px) {
+    .team-members{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 620px) {
+    .team-members{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
