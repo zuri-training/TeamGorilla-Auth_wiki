@@ -141,9 +141,9 @@ export default function Login() {
         </div>
         <button id="submit" type="submit" disabled={ !validEmail || !validPassword ? true : false}
         onClick={(e) => handleSubmit(e)}>Log in</button>
-    </form>
     <hr/>
     <div className="base-link">Dont have an account yet?  <a href="/register">Sign Up</a></div>
+    </form>
     </div>
 
     </div>
