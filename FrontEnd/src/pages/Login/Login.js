@@ -1,9 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import colImg from '../../assets/images/signin.png';
-// import googleImg from '../../assets/images/g'
 import logo from '../../assets/images/logo-red.png'
-// import { useForm } from 'react-hook-form';
 import "../../assets/styles/Login.css";
 import { FaCheck, FaInfoCircle, FaTimes } from 'react-icons/fa';
 import AuthService from '../../assets/api/auth.service'
@@ -62,7 +60,7 @@ export default function Login() {
     <img className="Icon" src={colImg} alt="" />
 
     </div>
-    <div className="Right-Form-Container">
+    <div className="Right-Form-Container Login">
         <img className="logo" src={logo} alt="logo"/>
         <p
           ref={errRef}
@@ -74,8 +72,7 @@ export default function Login() {
         </p>
         <h2>Welcome Back!</h2>
         <div className="hrwrapper"><hr id="hrline"/>OR LOGIN WITH EMAIL<hr id="hrline" /></div>
-    {/* <div className="UpperLink"><img className="Google-icon"src="/Assets/google.png" alt="" /> <span className="alt-Auth">Log in with Google</span></div> */}
-    <form>
+    <div className="UpperLink"><img className="Google-icon"src="https://res.cloudinary.com/dlvxqyg4z/image/upload/v1671003592/google_h8kohy.png" alt="" /> <span className="alt-Auth">Log in with Google</span></div> 
     <input id='email' 
     ref={emailRef} 
     autoComplete="off" 
