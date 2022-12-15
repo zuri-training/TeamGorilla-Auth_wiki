@@ -25,7 +25,7 @@ export default function Team () {
                 status='Asst. Team Lead'
               />
               <Template
-                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670849526/GORILLA/profile_image_-_Ogunlalu_Ademola_abminb.jpg'
+                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1671080523/GORILLA/IMG_3279_-_Oluwasijibomi_Simeon_kfqhpm.jpg'
                 alt='team-member-3'
                 name='Oluwasijibomi Solola'
                 role='Fulstack Developer'
@@ -61,7 +61,7 @@ export default function Team () {
                 role='Product Designer'
               />
               <Template
-                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670849524/GORILLA/Grace_Eyiolawi_-_Grace_Eyiolawi_nyq8nb.jpg'
+                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670952447/GORILLA/Aliyu_pas_-_ebiloma_aliyu_ftlaz7.jpg'
                 alt='team-member-9'
                 name='Ebiloma Aliyu'
                 role='Product Designer'
@@ -85,7 +85,7 @@ export default function Team () {
                 role='Product Designer'
               />
               <Template
-                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670849523/GORILLA/1662589470483_-_Ajayi_Victor_stve5r.jpg'
+                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670952446/GORILLA/20220307_085737_-_Abdulwaheed_Aminat_rnhexd.jpg'
                 alt='team-member-13'
                 name='Aminat Abdulwaheed'
                 role='Product Designer'
@@ -97,7 +97,7 @@ export default function Team () {
                 role='Product Designer'
               />
               <Template
-                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670849523/GORILLA/20221007_164242_-_Ehidiamhen_Aigbiluese_elhvnl.jpg'
+                src='https://res.cloudinary.com/dbfqhe9vc/image/upload/v1670870261/GORILLA/20221007_164209_1_exec1s.jpg'
                 alt='team-member-15'
                 name='Aigbiluese Ehidiamhen'
                 role='Frontend Developer'

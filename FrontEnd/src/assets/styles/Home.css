@@ -365,6 +365,24 @@
   .about_text{
     width: 100%;
   }
+  .newsletter_section{
+    width: 60%;
+  }
+  .newsletter_input{
+    width: 100% !important;
+    min-width: 200px !important;
+  }
+  .newsletter_email{
+    width: 80%;
+  }
+  .part{
+    justify-content:center;
+  }
+  .partner{
+    width:100%;
+    text-align: center;
+    /* margin: 0 auto; */
+  }
 
 }
 
