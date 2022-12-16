@@ -23,14 +23,14 @@ const  Verify = () => {
 
     </div>
 
-    <div className="Right-Form-Container">
+    <div className="Right-Form-Container Verify">
         <img className="logo" src={logo} alt="logo"/>
         <h2 className="verify-heading">Verify your E-mail</h2>
         <p className="heading-text">A link has been sent to {userEmail}, use it to<br/>
 sign in to account  </p>
-{/* <div className="button-wrapper">
-    <button  className="resend-link but">Resend link</button>
-    </div> */}
+ <div className="button-wrapper">
+    <button  type="submit" id="btn-2"  className="resend-link">Resend link</button>
+    </div> 
     <p className="base-link">Do you have an account already?  <span><a href="/login">Log In</a></span></p>
     </div>
 
