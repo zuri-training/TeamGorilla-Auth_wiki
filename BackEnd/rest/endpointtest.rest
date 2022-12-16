@@ -1,0 +1,17 @@
+POST http://localhost:5001/api/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "fullName": "nwaoghor praise",
+    "email": "chukunwoghor@gmail.com",
+    "password": "testing332"
+}
+
+###
+POST http://localhost:5000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "chukunwoghor@gmail.com",
+    "password": "testing332"
+}

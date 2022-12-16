@@ -1,0 +1,17 @@
+header {
+    text-align: center;
+}
+header h1 {
+    margin: 64px 0 24px 0;
+}
+.sub-head {
+    margin-top: 94px;
+    text-align: left;
+}
+.last-question {
+    margin-bottom: calc(120px - 32px);
+}
+.FAQ {
+    width: 80%;
+    margin: auto;
+}

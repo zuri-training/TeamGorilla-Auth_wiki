@@ -1,0 +1,30 @@
+@url = http://localhost:5001
+
+###
+POST {{url}}/api/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "chukunwaoghor@gmail.com",
+    "password" : "test12345"
+}
+
+###
+POST {{url}}/api/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName" : "test0006",
+    "lastName" : "test",
+    "email" : "test2223@gmail.com",
+    "password" : "test12345",
+    "isAdmin" : false
+}
+
+###
+POST {{url}}/api/comment HTTP/1.1
+Content-Type: application/json
+
+{
+    "body" : "Nice Docomentation"
+}
