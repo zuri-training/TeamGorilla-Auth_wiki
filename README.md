@@ -114,7 +114,7 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 5. [Aigbiluese Ehidiamhen](https://github.com/ehidiamhen)
 6. [Oluwasijibomi Solola](https://github.com/ossolola)
 7. [Erickson Akhabue]
-8. [Nwaoghor Chukunweiken]
+8. [Nwaoghor Chukunweiken](https://github.com/NwaoghorPraise2)
 9. [Grace Eyiolawi]
 10. [Olayinka Ismaila]
 11. [Fridah Kawala]

@@ -7,12 +7,9 @@ const router = express.Router();
 const { authenticate } = require("../middleware/authMiddleware");
 
 // comment User Routes
-router.post('/comment', createComment);
-router.patch('/:id', authenticate, commentReaction);
+router.route('/:id')
+        .patch(authenticate, commentReaction)
+        .post([check("body", "Make sure comment is not empty").exists()], authenticate, createComment);
 
-
-router.post('/:id',[
-    check("body", "Make sure comment is not empty").exists()
-], authenticate, createComment);
 
 module.exports = router;

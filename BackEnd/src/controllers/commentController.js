@@ -23,8 +23,8 @@ const createComment =  asyncHandler( async (req, res) => {
 
         const comment = await Cmts.create({
             body: req.body,
-            author: userId,
-            documentation_id: docId
+            author,
+            documentationID
         });
         
         if(comment) {
