@@ -88,7 +88,7 @@ useEffect(() => {
     <div className="Right-Form-Container">
         <img className="logo" src={logo} alt="logo"/>
         <h2>Sign Up</h2>
-        <div className="hrwrapper"><hr id="hrline"/>OR LOGIN WITH EMAIL<hr id="hrline" /></div>
+        {/* <div className="hrwrapper"><hr id="hrline"/>OR LOGIN WITH EMAIL<hr id="hrline" /></div> */}
         <p
           ref={errRef}
           className={errMsg ? "errmsg" : "offscreen"}
@@ -219,7 +219,7 @@ useEffect(() => {
         >Sign Up</button>
     </form>
 
-    <hr/>
+    {/* <hr/> */}
     <div className="base-link">Already have an account? <a href="/login">  Log In</a></div>
     {/* <div className="UpperLink"><img className="Google-icon"src="/Assets/google.png" alt=""/> <span className="alt-Auth">Log in with Google</span></div> */}
     </div>
