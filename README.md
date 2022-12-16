@@ -7,7 +7,7 @@
   <a href="https://auth-wiki-leroicodes.vercel.app/">Visit Auth_wiki</a>
 </h3>
 
-## Zuri Team Inc | I4G x Zuri Project Phase | TeamGorilla-Auth_wiki | 23-11-22
+### Zuri Team Inc | I4G x Zuri Project Phase | By TeamGorilla | 23-11-22
 
 <p align="center">
 <img src="https://forthebadge.com/images/badges/built-by-developers.svg">
@@ -134,8 +134,9 @@ On going.
 For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 
 ```html
+
 Visit the Repository to the Project on Github Website:
-	"https://github.com/zuri-training/TeamGorilla-Auth_wiki.git"
+  "https://github.com/zuri-training/TeamGorilla-Auth_wiki.git"
 
 Fork the repository:
   Click the "Fork" button on the upper right corner of the Repo page.
