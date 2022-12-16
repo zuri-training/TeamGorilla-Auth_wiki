@@ -114,21 +114,21 @@ Programming language / Framework / Technologies
 - Nodejs and express would be used to build the server.
 - MongoDB would be used as our Database management system
 
-### DB SCHEMA
+#### DB SCHEMA
 
 [Click me](https://docs.google.com/document/d/1Iut0EM0HU6XBIA39dKSvwA11Uic8z0qC_am7WJlTL2Y/edit?usp=sharing)
 
-### Design Sketch
+#### Design Sketch
 
 [Click me](<https://www.figma.com/file/qn6Dcbq5j00LYcNx7AC7jZ/AuthWiki-moodboard-and-Design-Sketch(Gorilla-Team)?node-id=0%3A1>)
 
-### Mood Board
+#### Mood Board
 
 [Click me](<https://www.figma.com/file/xhqZKJCcxhjDyI7lMiLOvY/AuthWiki-moodboard-(Gorilla-Team)?node-id=0%3A1&t=2a4TWIZmWX10UCIV-1>)
 
-# Project Status
+### Project Status
 
-On going.
+### 🛠 Ongoing
 
 ## How to Contribute
 For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
