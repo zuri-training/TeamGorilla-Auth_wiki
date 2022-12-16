@@ -7,7 +7,7 @@
   <a href="https://auth-wiki-leroicodes.vercel.app/">Visit Auth_wiki</a>
 </h3>
 
-<p align="center"> Zuri Team Inc | I4G x Zuri Project Phase | 23-11-22 </p>
+<p align="center"> Zuri Team Inc  | I4G x Zuri Project Phase  | 23-11-22 </p>
 
 <p align="center">
 <img src="./FrontEnd/src/assets/images/built-by-teamgorilla.svg">
