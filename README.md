@@ -123,7 +123,7 @@ For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 14. [Aminat Abdulwaheed](https://github.com/AminatAminat)
 15. [Obe Theresa]
 16.[Blessing Ogwu](https://github.com/personifybless)
-17.[Ebiloma Aliyu]
+17.[Ebiloma Aliyu](https://github.com/Ebiloma01)
 18.[Ademola Ogunlalu]
 
 
