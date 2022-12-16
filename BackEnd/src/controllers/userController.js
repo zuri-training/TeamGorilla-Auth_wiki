@@ -24,7 +24,6 @@ const registerUser = asyncHandler( async (req, res) => {
     try{
 
         const {firstName, lastName, email, password} = req.body
-		console.log(req.body)
         
         const verifyToken = uuidv4();
 
@@ -57,8 +56,6 @@ const registerUser = asyncHandler( async (req, res) => {
 
 			res.status(201).json({
                 success: true,
-				message: 'Account Created Successfully! Please check your mail',
-                user: user
 			});
 		}
 	} catch (error) {
@@ -81,7 +78,6 @@ const verifyAccount = asyncHandler(async (req, res) => {
 		} else {
 			verifyUser.isVerified = true;
 			await verifyUser.save();
-
 // 			res.status(200).json({
 //                 success: true,
 // 				message: 'Verification Successful. You can login now',
@@ -97,7 +93,7 @@ const verifyAccount = asyncHandler(async (req, res) => {
 	}
 });
 const try1 = asyncHandler(async (req, res) => {
-	const id = await req.params.id;
+	const id =  req.params.id;
 	res.status(201).json({
 		id
 	})
@@ -145,9 +141,7 @@ const loginUser = asyncHandler(async (req, res) => {
 	
 	res.status(200).json({
 		success: true,
-		message: 'Logged in successfully',
 		access_token: generateToken(user.id),
-        user: user
 	});
 });
 

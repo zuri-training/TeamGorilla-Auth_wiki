@@ -35,7 +35,10 @@ const login = async (email, password) => {
     })
 }
 const getCurrentUser = () => {
-    return JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user)
+    return user
+
 }
 const reset =  async (email, password) => {
     const resetToken = JSON.parse(localStorage.getItem('resetToken'))
