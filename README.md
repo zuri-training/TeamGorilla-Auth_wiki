@@ -10,7 +10,7 @@
 ### Zuri Team Inc | I4G x Zuri Project Phase | By TeamGorilla | 23-11-22
 
 <p align="center">
-<img src="https://forthebadge.com/images/badges/built-by-developers.svg">
+<img src="https://forthebadge.com/generator/?pbg=%23EF5B44&plabel=BUILT+BY&slabel=TeamGorilla&sbg=%230A2145">
 <img src="https://forthebadge.com/images/badges/open-source.svg">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">
 </p>
