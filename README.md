@@ -157,14 +157,16 @@ Pull upstream to get up to date with the original repo:
   git pull upstream main
 
 Create a new branch for the task you are working on:
-  git checkout -b branchName (Make sure your branchName is descriptive in context to the feature you are working on. 
-  Also be sure to check which branch you are using git status before you begin working)
+  git checkout -b branchName 
+  (Make sure your branchName is descriptive in context to the feature you are working on) 
+  (Also be sure to check which branch you are using git status before you begin working)
 
 When you are done with your task, do:
   git add
 
 Commit your work with a message:
- git commit -m "message" (write a message that will make insight on what you pushed)
+ git commit -m "message" 
+ (write a message that will make insight on what you pushed)
 
 To avoid conflicts:
   git pull upstream main
