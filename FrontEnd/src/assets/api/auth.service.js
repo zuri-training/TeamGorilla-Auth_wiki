@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:8000/api/user/';
+const API_URL = 'https://auth-wiki.onrender.com/api/user/';
 
 const register  = async (firstName, lastName, email, password) => {
     return await axios.post(API_URL + "register", {

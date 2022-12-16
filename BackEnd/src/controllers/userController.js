@@ -45,7 +45,7 @@ const registerUser = asyncHandler( async (req, res) => {
 			const text = `<h1>Email Confirmation</h1>
         <h2>Hello ${firstName}</h2>
         <p>Verify your email address to complete the signup and login to your account to Authwiki</p>
-        <a href='http://localhost:8000/api/user/register/${user.verificationCode}'> Click here</a>
+        <a href='https://auth-wiki.onrender.com/api/user/register/${user.verificationCode}'> Click here</a>
 
         </div>`;
 
@@ -82,12 +82,13 @@ const verifyAccount = asyncHandler(async (req, res) => {
 			verifyUser.isVerified = true;
 			await verifyUser.save();
 
-			res.status(200).json({
-                success: true,
-				message: 'Verification Successful. You can login now',
-				//isVerified: verifyUser.isVerified,
-                user: verifyUser
-			});
+// 			res.status(200).json({
+//                 success: true,
+// 				message: 'Verification Successful. You can login now',
+// 				//isVerified: verifyUser.isVerified,
+//                 user: verifyUser
+// 			});
+			res.redirect('https://auth-wiki-leroicodes.vercel.app/login')
 		}
 	} catch (error) {
 		res.status(500);
@@ -246,7 +247,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
         <h2>Hello ${user.firstName}</h2>
         <p>You are receiving this email because you (or someone else) has
          requested the reset of a password</p>
-           <a href='http://localhost:8000/api/user/resetpassword/${resetToken}'> Click here to reset your password</a>
+           <a href='https://auth-wiki.onrender.com/api/user/resetpassword/${resetToken}'> Click here to reset your password</a>
 
         </div>`;
 			//change to app reset page
