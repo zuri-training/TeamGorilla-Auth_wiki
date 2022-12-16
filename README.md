@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/zuri-training/TeamGorilla-Auth_wiki/blob/main/FrontEnd/src/assets/images/logo-red.png" align="center" width="50%">
+<img src="https://github.com/zuri-training/TeamGorilla-Auth_wiki/blob/main/FrontEnd/src/assets/images/Authwiki.png" align="center" width="50%">
 </p>
 <p align="center">AuthWiki is a Library based platform that serves as a storage for various authentication codes where users can search for codes, read about how they work and how to apply them; as well as have access to download the codes, react and comment once they are registered.</p>
 
@@ -11,15 +11,17 @@
 
 <p align="center">
 <img src="https://forthebadge.com/images/badges/built-by-developers.svg">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg">
 <img src="https://forthebadge.com/images/badges/open-source.svg">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg">
 </p>
 
-<a href="/"><img src="https://github.com/zuri-training/TeamGorilla-Auth_wiki/blob/main/FrontEnd/src/assets/images/git_hero_image.png" width="100%"></a>
+<p align="center">
+<img src="https://github.com/zuri-training/TeamGorilla-Auth_wiki/blob/main/FrontEnd/src/assets/images/git_hero_image.png" align="center" width="100%">
+</p>
 
 
-# Introduction
-## A platform that allows users to have access to authentication codes and interact with communities.
+## Introduction
+### A platform that allows users to have access to authentication codes and interact with communities.
 ### Project Overview
 
 Authentication is the process of verifying a user or device before allowing access to a system or resources.
@@ -131,7 +133,7 @@ On going.
 ## How to Contribute
 For TeamGorilla-Auth_wiki members, follow this steps to collaborate:
 
-```bash
+```html
 Visit the Repository to the Project on Github Website:
 	"https://github.com/zuri-training/TeamGorilla-Auth_wiki.git"
 
