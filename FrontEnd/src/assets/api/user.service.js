@@ -12,8 +12,22 @@ const getUser = () => {
         return res.data
     })
 }
+const download = () => {
+    axios.get(API_URL + 'download', { 
+        key: 'value', 
+        headers: authHeader(),
+        responseType: 'blob' }).then( function (response) {
+        return response;
+    })
+}
 
+// function apihelperdownload () {
+//     return axios.post(API_URL + "download",{ key: 'value', headers: authHeader(), responseType: 'blob' }).then(function (response) {
+//         return response;
+//     })
+// }
 const UserService = {
     getUser,
+    download
 }
 export default UserService;

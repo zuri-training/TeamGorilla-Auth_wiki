@@ -120,5 +120,6 @@
     .mobile-flex .si {
         margin: 0 auto !important;
         margin-bottom: 15px !important;
+        width: 115px !important;
     }
 }

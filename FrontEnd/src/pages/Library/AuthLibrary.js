@@ -6,6 +6,10 @@ import { BsDownload, BsFillChatSquareTextFill } from 'react-icons/bs'
 import Thumbs from './Thumbs'
 
 function AuthLibrary() {
+
+    const download = (e) =>{
+        
+    }
   return (
     <div>
         <div className='doc'>
@@ -15,7 +19,7 @@ function AuthLibrary() {
             <p className='auth-l'><a className='doc-link' href='/Library'>Library</a>{'>'} jwt-token</p>
             <div className='auth-title'>
                 <h3 className='a'>Jwt Web token Authentication</h3>
-                <button className='b'>Download code<span><BsDownload /></span></button>
+                <button className='b' onClick={(e) =>{download(e)}}>Download code<span><BsDownload /></span></button>
             </div>
         <div className='auth-desc'>
             <h5>Description</h5>

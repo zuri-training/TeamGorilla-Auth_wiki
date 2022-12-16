@@ -44,7 +44,7 @@ export default function Login() {
       // console.log(res)
       if (res.success === true){
         Navigate("/library");
-        // window.location.reload()
+        window.location.reload()
       }
     }, (error) => {
       const message = (error.res && 
