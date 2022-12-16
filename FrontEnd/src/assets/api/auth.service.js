@@ -26,8 +26,9 @@ const login = async (email, password) => {
         email,
         password
     }).then((res) => {
-        if (res.data.accessToken){
+        if (res.data.access_token){
             localStorage.setItem('user', JSON.stringify(res.data));
+            localStorage.removeItem('userEmail');
         }
 
         return res.data
@@ -36,11 +37,35 @@ const login = async (email, password) => {
 const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem('user'));
 }
-const reset = () => {
+const reset =  async (email, password) => {
+    const resetToken = JSON.parse(localStorage.getItem('resetToken'))
+        
+        return await axios.post(API_URL + "resetpassword", {
+            resetToken,
+            password
+        }).then((res) => {
+            localStorage.removeItem('resetToken')
+            localStorage.removeItem('userEmail')
+            return res.data
+        })
+
+}
+
+
+const forgot = async (email) => {
+    return await axios.post(API_URL + "forgotpassword", {
+        email,
+}).then((res) => {
+    localStorage.setItem('resetToken', JSON.stringify(res.data.resetToken))
+    localStorage.setItem('userEmail', JSON.stringify(email))
+    return res.data
+    
+});
 
 }
 const signOut = () => {
     localStorage.removeItem('user')
+    localStorage.removeItem('userEmail')
 }
 
 const AuthService = {
@@ -49,7 +74,8 @@ const AuthService = {
     getCurrentUser,
     getUserEmail,
     reset,
-    signOut
+    signOut,
+    forgot
 };
 
 export default AuthService;
