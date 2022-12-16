@@ -23,7 +23,7 @@ router.get('/register/:code', verifyAccount);
 router.get('/me', authenticate , getUser)
 router.patch('/me', authenticate, updateUser);
 router.post('/forgotpassword', forgotPassword);
-router.put('resetpassword/:resetToken', resetPassword);
+router.put('/resetpassword', resetPassword);
 
 
 module.exports = router;

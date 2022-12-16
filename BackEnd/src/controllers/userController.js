@@ -249,7 +249,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
            <a href='http://localhost:8000/api/user/resetpassword/${resetToken}'> Click here to reset your password</a>
 
         </div>`;
-
+			//change to app reset page
 	try {
 		await sendEmail({
 			email: user.email,
@@ -260,6 +260,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 		res.status(200).json({
 			success: true,
 			message: 'Email sent',
+			resetToken
 		});
 	} catch (error) {
 		user.resetPasswordToken = undefined;
@@ -282,7 +283,7 @@ const resetPassword = asyncHandler(async (req, res) => {
 	//  Get hased token
 	const resetPasswordToken = crypto
 		.createHash('sha256')
-		.update(req.params.resettoken)
+		.update(req.body.resetToken)
 		.digest('hex');
 
 	const user = await User.findOne({

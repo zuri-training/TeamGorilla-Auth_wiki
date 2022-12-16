@@ -1,11 +1,15 @@
 
 main{
 font-family: 'Open Sans';
+/* background: #fff; */
 }
 
 .Main-Container{
 display: flex;
-width: 100%;
+/* width: 84%; */
+flex-wrap: wrap;
+/* height:100vh; */
+margin: 0 auto;
 }
 .Left-Form-Container{
 background: #0A2145;
@@ -24,6 +28,7 @@ height: 226px;
 
 }
 .Right-Form-Container{
+    /* background: white; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -41,12 +46,11 @@ font-size: 34px;
 line-height: 40px;
 text-align: center;
 color: #051123;
-margin-top: 82px;
-margin-bottom: 86.5px;
+margin-top: 40px;
 }
 
 form{
-    margin-top: 133px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -216,3 +220,35 @@ color: #DDE1E8;
 .line {
         display: inline-block;
       }
+
+
+@media only screen and (max-width: 768px) {
+    main{
+        background: #0A2145;
+        }
+    .Main-Container{
+        flex-direction: column;
+    }
+    .Left-Form-Container, .Right-Form-Container{
+        width:100%;
+    }
+    .Left-Form-Container{
+        /* background:#ffffff; */
+        border-radius: 0px;
+        height: 400px;
+    }
+    .Right-Form-Container{
+        background:#ffffff;
+        border-radius: 35px 35px 0px 0px;
+    }
+    form {
+        width:100%
+    }
+    #submit, .inputs{
+        width: 95% !important;
+        margin: auto;
+    }
+    .height{
+        height:auto;
+    }
+}

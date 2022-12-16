@@ -1,42 +1,49 @@
+
 import React, {useState, useRef, useEffect} from 'react'
-import resetImg from '../../assets/images/reset-password.png';
-// import googleImg from '../../assets/images/g'
+import {useNavigate} from 'react-router-dom'
 import logo from '../../assets/images/logo-red.png'
-// import { useForm } from 'react-hook-form';
+import colImg from '../../assets/images/reset-password.png';
 import "../../assets/styles/Login.css";
+import AuthService from '../../assets/api/auth.service';
 import { FaCheck, FaInfoCircle, FaTimes } from 'react-icons/fa';
-import AuthService from '../../assets/api/auth.service'
-import { useNavigate } from 'react-router-dom';
 
 function Reset() {
+    const Navigate = useNavigate()
 
-  const Navigate = useNavigate()
 
-
+  const PWD_REGEX = /^[A-Za-z0-9]\w{8,20}$/;
   const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   const emailRef = useRef();
+  const passwordRef = useRef();
   const errRef = useRef();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [validEmail, setValidEmail] = useState(false);
+  const [validPassword, setValidPassword] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
+  const [passwordFocus, setPasswordFocus] = useState(false)
   const [errMsg, setErrMsg] = useState("");
-
+  
   useEffect(() => {
     setValidEmail(EMAIL_REGEX.test(email));
   }, [email]);
 
   useEffect(() => {
+    setValidPassword(PWD_REGEX.test(password));
+  }, [password]);
+
+  useEffect(() => {
     setErrMsg("");
-  }, [email]);
+  }, [email, password]);
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     // setSuccess(false);
-    await AuthService.reset( email)
+    await AuthService.reset( email, password)
     .then((res) => {
       // console.log(res)
       if (res.success === true){
-        Navigate("/library");
+        Navigate("/");
         // window.location.reload()
       }
     }, (error) => {
@@ -47,20 +54,27 @@ function Reset() {
     })
   }
 
+
   return (
-        <main>
+    <main>
     <div className="Main-Container">
     <div className="Left-Form-Container">
-     <img className="Icon" src={resetImg} alt="" />
- 
+    <img className="Icon" src={colImg} alt="" />
+
     </div>
     <div className="Right-Form-Container">
-      <img className="logo" src={logo} alt="logo"/>
-        <h2>Forgotten your password?</h2>
-        <p>Follow these easy steps to reset your password</p>
+        <img className="logo" src={logo} alt="logo"/>
+        <p
+          ref={errRef}
+          className={errMsg ? "errmsg" : "offscreen"}
+          aria-live="assertive"
+        >
+          {errMsg}
+          
+        </p>
+        <h2>Reset Password</h2>
     <form>
-        {/* <label for="Email"></label> */}
-        <input id='email' 
+    <input id='email' 
     ref={emailRef} 
     autoComplete="off" 
     onChange={(e) => setEmail(e.target.value)} 
@@ -86,9 +100,39 @@ function Reset() {
             <FaInfoCircle />
             enter a valid email
           </p>
-          <button id="submit" type="submit" disabled={ !validEmail ? true : false}
-        onClick={(e) => handleSubmit(e)}>Send Reset Link</button>
-        {/* <button id="btn-2" type="reset">Back</button> */}
+        <input id='password' 
+    ref={passwordRef} 
+    autoComplete="off" 
+    onChange={(e) => setPassword(e.target.value)} 
+    value={password} 
+    required 
+    aria-invalid={validPassword? "false" : "true"}
+    aria-describedby="uidpassword"
+    onFocus={() => setPasswordFocus(true)}
+    onBlur={() => setPasswordFocus(false)} 
+    className="inputs"
+    placeholder="Your New Password" 
+    type="password"/>
+      <FaCheck className={validPassword ? "valid": "hide"} />
+      <FaTimes className={validPassword || !password ? "hide": "invalid"} />
+      <p
+            id="uidpassword"
+            className={
+              passwordFocus  && !validPassword
+                ? "instructions"
+                : "offscreen"
+            }
+          >
+            <FaInfoCircle />
+            4 to 24 characters.
+            <br />
+            Must begin with a letter.
+            <br />
+            Letters, numbers, are allowed.
+          </p>
+        <button id="submit" type="submit" disabled={ !validEmail || !validPassword ? true : false}
+        onClick={(e) => handleSubmit(e)}>Reset</button>
+    {/* <hr/> */}
     </form>
     </div>
 
@@ -97,4 +141,4 @@ function Reset() {
   )
 }
 
-export default Reset
+export default Reset;
