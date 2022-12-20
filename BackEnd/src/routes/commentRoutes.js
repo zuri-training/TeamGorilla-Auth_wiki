@@ -7,8 +7,8 @@ const router = express.Router();
 const { authenticate } = require("../middleware/authMiddleware");
 
 // comment User Routes
-router.post('/comment', createComment);
-router.patch('/:id', authenticate, commentReaction);
+// router.post('/comment', createComment);
+// router.patch('/:id', authenticate, commentReaction);
 
 
 router.post('/:id',[

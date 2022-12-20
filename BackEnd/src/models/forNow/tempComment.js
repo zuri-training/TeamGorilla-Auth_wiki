@@ -8,13 +8,8 @@ const tempCommentSchema = new Schema (
             type: String,
             required: true
         },   
-        liked: {
-            type:[String],
-            default:[]
-        },
-        unliked: {
-            type:[String],
-            default:[]
+        author: {
+            type: String
         },
     },
 

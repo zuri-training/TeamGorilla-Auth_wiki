@@ -1,8 +1,10 @@
 const Comment = require('../../models/forNow/tempComment')
 const Subscribe = require('../../models/forNow/tempSubscribe')
 const Download = require('../../models/forNow/tempDownload')
-const { validationResult } = require("express-validator");
+// const { validationResult } = require("express-validator");
 const asyncHandler = require('express-async-handler');
+
+
 
 const createDownload = asyncHandler( async (req, res) => {
     const filePath = __dirname + "/public/assets/authMiddleware.js" ;
@@ -24,18 +26,25 @@ const createDownload = asyncHandler( async (req, res) => {
 })
 
 const getNumberDownloads = asyncHandler( async (req, res) =>{
-    const downloads = await Download.find();
+    try{
+        const downloads = await Download.find();
     res.status(200).json({
         success: true,
         downloads: downloads.length
     })
+}catch(err){
+    res.status(500)
+    throw new Error('something went wrong')
+}
  })
 
  const createComment = asyncHandler( async (req, res) => {
-    const { body } = req.body
+    const comment = req.body.comment
+    const {firstName, lastName} = req.user
     try {
-        const comment = await Comment.create({ 
-            body
+        const newComment = await Comment.create({ 
+            author: firstName + " " + lastName,
+            body: comment
         })
         res.status(201).json({
             success: true,
@@ -60,6 +69,19 @@ const getNumberDownloads = asyncHandler( async (req, res) =>{
     }
  })
 
+ const getAllCommentsNumber = asyncHandler( async (req, res) => {
+    try{
+        const comments = await Comment.find()
+        res.status(201).json({
+            success: true,
+            length: comments.length
+        })
+    } catch (err){
+        res.status(500)
+        throw new Error(err.message)
+    }
+ })
+
  const createSubscribe = asyncHandler( async (req, res) => {
     const {email} = req.body
     try{
@@ -75,10 +97,12 @@ const getNumberDownloads = asyncHandler( async (req, res) =>{
     }
  })
 
+
  module.exports = {
     createDownload,
     createSubscribe,
     createComment,
     getAllComments,
-    getNumberDownloads
+    getNumberDownloads,
+    getAllCommentsNumber,
  }
