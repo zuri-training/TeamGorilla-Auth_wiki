@@ -1,22 +1,24 @@
 import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom'
 import '../../assets/styles/Header.css'
 import logo from '../../assets/images/Authwiki.png'
 import AuthService from '../../assets/api/auth.service'
 
 function Header() {
 
+    // const Navigate = useNavigate();
 
     const [user, setUser] = useState({})
     useEffect(() => {
       setUser(AuthService.getCurrentUser())
-    }, [user])
-
-    const handleSubmit = () => {
-      AuthService.signOut()
-      setUser({})
-    }
+    }, [])
     const signOut = () => {
-
+      AuthService.signOut()
+      .then((res) => {
+        setUser('')
+        // history.push()
+      })
+      
     }
     // const [isVisible, setIsVisible] = useState(false)
     const [displayV, setDisplayV] = useState('')
@@ -47,7 +49,7 @@ function Header() {
         </div>
         { user? 
           <div className="mobile-flex">
-            <a href='/register' className={`header-btn mag si ${displayV}`} onClick={(e) => signOut(e)}>Sign out</a>
+            <a href='/' className={`header-btn mag si ${displayV}`} onClick={(e) => signOut(e)}>Sign out</a>
           </div> 
           :
           <div className="mobile-flex">

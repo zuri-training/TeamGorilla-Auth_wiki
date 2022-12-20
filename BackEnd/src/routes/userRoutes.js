@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
+const { createDownload, getNumberDownloads } = require("../controllers/forNow/forNowController");
 const {loginUser, getAllUsers, registerUser, verifyAccount, getUser, updateUser, forgotPassword, resetPassword } = require('../controllers/userController');
 const {authenticate} = require('../middleware/authMiddleware')
 
@@ -24,6 +25,8 @@ router.get('/me', authenticate , getUser)
 router.patch('/me', authenticate, updateUser);
 router.post('/forgotpassword', forgotPassword);
 router.put('/resetpassword', resetPassword);
+router.get('/download', authenticate , createDownload);
+// router.get('download/number', getNumberDownloads)
 
 
 module.exports = router;

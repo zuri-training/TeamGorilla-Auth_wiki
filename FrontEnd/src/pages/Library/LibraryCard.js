@@ -9,9 +9,8 @@ function LibraryCard() {
     if (checked === false){
       setChecked(true)
     } else{
-      setChecked(false)
+      setChecked(false)   
     }
-    console.log(checked)
   }
   return (
     <div className='card'>
