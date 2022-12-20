@@ -245,7 +245,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
         <h2>Hello ${user.firstName}</h2>
         <p>You are receiving this email because you (or someone else) has
          requested the reset of a password</p>
-           <a href='https://auth-wiki.onrender.com/api/user/resetpassword/${resetToken}'> Click here to reset your password</a>
+           <a href='https://auth-wiki-leroicodes.vercel.app/reset'> Click here to reset your password</a>
 
         </div>`;
 			//change to app reset page
