@@ -145,9 +145,7 @@ const loginUser = asyncHandler(async (req, res) => {
 	
 	res.status(200).json({
 		success: true,
-		message: 'Logged in successfully',
 		access_token: generateToken(user.id),
-        user: user
 	});
 });
 
