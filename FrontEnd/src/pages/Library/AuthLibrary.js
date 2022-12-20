@@ -4,12 +4,14 @@ import LibraryHeader from './LibraryHeader'
 import "../../assets/styles/AuthLibrary.css";
 import { BsDownload, BsFillChatSquareTextFill } from 'react-icons/bs'
 import Thumbs from './Thumbs'
+import UserService from '../../assets/api/user.service';
 
 function AuthLibrary() {
 
     const download = (e) =>{
-        
+        UserService.download()
     }
+    
   return (
     <div>
         <div className='doc'>
@@ -67,7 +69,7 @@ function AuthLibrary() {
                 </div>
             </div>
             <div className='comments-add'>
-                <div class="comments-add-wrapper">
+                <div className="comments-add-wrapper">
                     <input type="text" name="search" placeholder="Add a comment"  />
                     <button>Add comment</button>
                 </div>

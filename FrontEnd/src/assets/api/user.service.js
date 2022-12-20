@@ -3,29 +3,30 @@ import axios from 'axios'
 import authHeader from './auth-header';
 
 
-const API_URL = "http://localhost:8000/api/user/"
+const API_URL = "https://auth-wiki.onrender.com/api/user/"
 
 const getUser = () => {
     axios.get(API_URL + 'me', {
-        headers: authHeader
+        headers: authHeader()
     }).then((res) =>{
         return res.data
     })
 }
 const download = () => {
+    const FileDownload = require('js-file-download')
     axios.get(API_URL + 'download', { 
         key: 'value', 
-        headers: authHeader(),
-        responseType: 'blob' }).then( function (response) {
-        return response;
+        headers: authHeader()
+    }).then(({data}) => {
+        // console.log(res)
+        FileDownload(data , 'authController.js');
+        console.log('success!', data)
+    }).catch(err => {
+        console.log(err)
+
     })
 }
 
-// function apihelperdownload () {
-//     return axios.post(API_URL + "download",{ key: 'value', headers: authHeader(), responseType: 'blob' }).then(function (response) {
-//         return response;
-//     })
-// }
 const UserService = {
     getUser,
     download
