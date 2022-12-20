@@ -3,7 +3,8 @@ import axios from 'axios'
 import authHeader from './auth-header';
 
 
-const API_URL = "https://auth-wiki.onrender.com/api/user/"
+// const API_URL = "https://auth-wiki.onrender.com/api/user/"
+const API_URL = "http://localhost:8000/api/user/"
 
 const getUser = () => {
     axios.get(API_URL + 'me', {
