@@ -98,6 +98,7 @@ const getDownloadNumber = async () => {
         return res.data.downloads
     }).catch(err => {
         console.log(err)
+
     })
 }
 const check = async (bool) =>{
