@@ -10,8 +10,8 @@ function AuthLibrary() {
 
     const download = (e) =>{
         UserService.download()
-        
     }
+    
   return (
     <div>
         <div className='doc'>
