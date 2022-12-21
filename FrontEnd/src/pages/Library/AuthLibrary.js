@@ -1,16 +1,54 @@
-import React from 'react'
+import React, {useState, useEffect}from 'react'
 import "../../assets/styles/Library.css";
 import LibraryHeader from './LibraryHeader'
 import "../../assets/styles/AuthLibrary.css";
 import { BsDownload, BsFillChatSquareTextFill } from 'react-icons/bs'
 import Thumbs from './Thumbs'
 import UserService from '../../assets/api/user.service';
+import {useNavigate} from 'react-router-dom'
+import Comment from './Comment';
 
 function AuthLibrary() {
+    const Navigate = useNavigate()
 
     const download = (e) =>{
         UserService.download()
+        UserService.getUser().then((res) => {
+            if (res.message === 'Request failed with status code 401'){
+                Navigate('/login')
+                localStorage.removeItem('user');
+            }
+        })
     }
+    const [comments, setComments] = useState([]);
+    const [length, setLength] = useState(0)
+    useEffect(() => {
+        UserService.getAllComments().then((res) =>{
+            setComments(res)
+            
+        });
+        UserService.getCommentsNumber().then((res) => {
+            setLength(res)
+        })
+    }, [])
+
+    const [comment, setComment] = useState('')
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        UserService.createComment(comment).then((res) =>{
+            if (res.message === 'Request failed with status code 401'){
+                Navigate('/login')
+                localStorage.removeItem('user');
+            }
+        })
+        UserService.getAllComments().then((res) =>{
+            setComments(res)
+        });
+        UserService.getCommentsNumber().then((res) => {
+            setLength(res)
+        })
+    } 
     
   return (
     <div>
@@ -65,16 +103,16 @@ function AuthLibrary() {
                     <span><Thumbs /></span>
                 </div>
                 <div>
-                    <span><BsFillChatSquareTextFill /> 100 comments</span>
+                    <span><BsFillChatSquareTextFill /> {length} comments</span>
                 </div>
             </div>
             <div className='comments-add'>
                 <div className="comments-add-wrapper">
-                    <input type="text" name="search" placeholder="Add a comment"  />
-                    <button>Add comment</button>
+                    <input type="text" id='comment' name="comment" placeholder="Add a comment" onChange={(e) => setComment(e.target.value)}  />
+                    <button type='submit' onClick={(e) => handleSubmit(e)}>Add comment</button>
                 </div>
             </div>
-            <div className='comments-box'>
+            {/* <div className='comments-box'>
                 <h3>Ademola Ogunlalu . 1h</h3>
                 <p>Optional. For the purpose of mitigating replay attacks, specify the string value to use to associate a client session with an id_token. The id_token includes information (claims) about the user and, if specified, the nonce value. The id_token is encoded as a JWT and returned in the</p>
                 <div className='auth-like'>
@@ -90,7 +128,18 @@ function AuthLibrary() {
                 <span><Thumbs /> </span>
                 <p>reply</p>
                 </div>
-            </div>
+            </div> */}
+            {/* <Comment />
+            <hr></hr>
+            <Comment /> */}
+            { comments.map((i) => {
+                return (<Comment 
+            key={i.id}
+            author={i.author}
+            body={i.body}
+            time={i.time} />)
+            })
+            }
         </div>
         </div>
     </div>

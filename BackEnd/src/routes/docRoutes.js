@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', getAllDocs);
 router.get('/:id', getSingleDoc);
 router.get('/download/:id', authenticate,  downloadDoc);
-router.patch('/:id', authenticate, docReaction);
+// router.patch('/:id', authenticate, docReaction);
 
 
 module.exports = router

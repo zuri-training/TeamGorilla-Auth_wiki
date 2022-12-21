@@ -174,7 +174,7 @@ const getUser = asyncHandler(async (req, res) => {
         }
         res.status(200).json({
             success: true,
-            user: user,
+            // user: user,
         }); 
         
     } catch(err){

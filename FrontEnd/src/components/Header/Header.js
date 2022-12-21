@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import '../../assets/styles/Header.css'
 import logo from '../../assets/images/Authwiki.png'
 import AuthService from '../../assets/api/auth.service'
+import UserService from '../../assets/api/user.service';
 
 function Header() {
 
